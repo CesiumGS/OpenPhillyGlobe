@@ -16,6 +16,7 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
                 busObj.billboard = new Cesium.DynamicBillboard();
                 busObj.billboard.image = new Cesium.ConstantProperty('Assets/images/septa_raised.png');
                 busObj.billboard.verticalOrigin = new Cesium.ConstantProperty(Cesium.VerticalOrigin.BOTTOM);
+                busObj.billboard.nearFarScalar = new Cesium.ConstantProperty(new Cesium.NearFarScalar(5e2, 1.0, 1.0e4, 0.1));
             }
             //if (!Cesium.defined(busObj.position)) {
             //    busObj.position = new Cesium.SampledPositionProperty();
