@@ -15,7 +15,15 @@
 		"thursday" : 10139,
 		"friday" : 12791,
 		"saturday" : 8874,
-		"sunday" : 5146		
+		"sunday" : 5146,
+		"Early Morning" : 57,
+		"Morning RH " : 539,
+		"Late Morning" : 960,
+		"Lunch" : 2668,
+		"Late Afternoon" : 1774,
+		"Evening RH" : 2069,
+		"Evening" : 1233,
+		"Late Night" : 368
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 11599,
@@ -23,7 +31,15 @@
 		"week1" : 10477,
 		"week2" : 10110,
 		"week3" : 10382,
-		"week4" : 10613		
+		"week4" : 10613,
+		"Early Morning" : 58,
+		"Morning RH " : 623,
+		"Late Morning" : 1070,
+		"Lunch" : 2894,
+		"Late Afternoon" : 1927,
+		"Evening RH" : 2243,
+		"Evening" : 1241,
+		"Late Night" : 339
 	}
 }, {
 	"name" : "1200 Block of Walnut",
@@ -42,7 +58,15 @@
 		"thursday" : 7008,
 		"friday" : 7889,
 		"saturday" : 7723,
-		"sunday" : 6152		
+		"sunday" : 6152,
+		"Early Morning" : 63,
+		"Morning RH " : 387,
+		"Late Morning" : 458,
+		"Lunch" : 1385,
+		"Late Afternoon" : 930,
+		"Evening RH" : 1536,
+		"Evening" : 1561,
+		"Late Night" : 738
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 6434,
@@ -50,7 +74,15 @@
 		"week1" : 6570,
 		"week2" : 6050,
 		"week3" : 5837,
-		"week4" : 6426		
+		"week4" : 6426,
+		"Early Morning" : 50,
+		"Morning RH " : 364,
+		"Late Morning" : 463,
+		"Lunch" : 1351,
+		"Late Afternoon" : 910,
+		"Evening RH" : 1386,
+		"Evening" : 1142,
+		"Late Night" : 555
 	}
 }, {
 	"name" : "1700 Block of Walnut",
@@ -69,7 +101,15 @@
 		"thursday" : 22192,
 		"friday" : 26198,
 		"saturday" : 28377,
-		"sunday" : 21018		
+		"sunday" : 21018,
+		"Early Morning" : 66,
+		"Morning RH " : 1187,
+		"Late Morning" : 1662,
+		"Lunch" : 5652,
+		"Late Afternoon" : 3956,
+		"Evening RH" : 5789,
+		"Evening" : 4278,
+		"Late Night" : 1353
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 23917,
@@ -77,7 +117,15 @@
 		"week1" : 22629,
 		"week2" : 23698,
 		"week3" : 23494,
-		"week4" : 25173		
+		"week4" : 25173,
+		"Early Morning" : 76,
+		"Morning RH " : 1295,
+		"Late Morning" : 1760,
+		"Lunch" : 5767,
+		"Late Afternoon" : 3892,
+		"Evening RH" : 5680,
+		"Evening" : 4139,
+		"Late Night" : 1139
 	}
 }, {
 	"name" : "800 Block of Market",
@@ -96,7 +144,15 @@
 		"thursday" : 19581,
 		"friday" : 22089,
 		"saturday" : 18744,
-		"sunday" : 12516		
+		"sunday" : 12516,
+		"Early Morning" : 85,
+		"Morning RH " : 1632,
+		"Late Morning" : 2025,
+		"Lunch" : 5306,
+		"Late Afternoon" : 3415,
+		"Evening RH" : 4792,
+		"Evening" : 1782,
+		"Late Night" : 402
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 20206,
@@ -104,7 +160,15 @@
 		"week1" : 18335,
 		"week2" : 18393,
 		"week3" : 18061,
-		"week4" : 18746		
+		"week4" : 18746,
+		"Early Morning" : 87,
+		"Morning RH " : 1651,
+		"Late Morning" : 1969,
+		"Lunch" : 4792,
+		"Late Afternoon" : 3289,
+		"Evening RH" : 4400,
+		"Evening" : 1789,
+		"Late Night" : 407
 	}
 }, {
 	"name" : "Intersection of 12th & Market",
@@ -123,7 +187,15 @@
 		"thursday" : 20694,
 		"friday" : 23080,
 		"saturday" : 16465,
-		"sunday" : 11454		
+		"sunday" : 11454,
+		"Early Morning" : 29,
+		"Morning RH " : 2117,
+		"Late Morning" : 2306,
+		"Lunch" : 5459,
+		"Late Afternoon" : 3477,
+		"Evening RH" : 4970,
+		"Evening" : 1255,
+		"Late Night" : 99
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 20843,
@@ -131,7 +203,15 @@
 		"week1" : 18619,
 		"week2" : 17767,
 		"week3" : 17685,
-		"week4" : 20583		
+		"week4" : 20583,
+		"Early Morning" : 56,
+		"Morning RH " : 2267,
+		"Late Morning" : 2154,
+		"Lunch" : 5226,
+		"Late Afternoon" : 3360,
+		"Evening RH" : 4495,
+		"Evening" : 991,
+		"Late Night" : 114
 	}
 }, {
 	"name" : "1500 Block of Chestnut",
@@ -150,7 +230,15 @@
 		"thursday" : 19297,
 		"friday" : 23181,
 		"saturday" : 18178,
-		"sunday" : 12589		
+		"sunday" : 12589,
+		"Early Morning" : 67,
+		"Morning RH " : 1100,
+		"Late Morning" : 1418,
+		"Lunch" : 5030,
+		"Late Afternoon" : 3457,
+		"Evening RH" : 4893,
+		"Evening" : 2622,
+		"Late Night" : 585
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 20863,
@@ -158,7 +246,15 @@
 		"week1" : 18094,
 		"week2" : 19274,
 		"week3" : 18704,
-		"week4" : 20325		
+		"week4" : 20325,
+		"Early Morning" : 509,
+		"Morning RH " : 1602,
+		"Late Morning" : 1836,
+		"Lunch" : 4713,
+		"Late Afternoon" : 3204,
+		"Evening RH" : 4226,
+		"Evening" : 1835,
+		"Late Night" : 1174
 	}
 }, {
 	"name" : "1600 Block of Chestnut",
@@ -177,7 +273,15 @@
 		"thursday" : 19947,
 		"friday" : 22863,
 		"saturday" : 17792,
-		"sunday" : 14354		
+		"sunday" : 14354,
+		"Early Morning" : 84,
+		"Morning RH " : 1072,
+		"Late Morning" : 1605,
+		"Lunch" : 5759,
+		"Late Afternoon" : 3555,
+		"Evening RH" : 5247,
+		"Evening" : 3044,
+		"Late Night" : 733		
 	},
 	"year2012" : {
 		"averageWeekdayPedestrianActivity" : 22156,
@@ -185,6 +289,14 @@
 		"week1" : 19310,
 		"week2" : 21075,
 		"week3" : 21414,
-		"week4" : 21057		
+		"week4" : 21057,
+		"Early Morning" : 79,
+		"Morning RH " : 1040,
+		"Late Morning" : 1502,
+		"Lunch" : 5803,
+		"Late Afternoon" : 3609,
+		"Evening RH" : 5171,
+		"Evening" : 2754,
+		"Late Night" : 755
 	}
 }]

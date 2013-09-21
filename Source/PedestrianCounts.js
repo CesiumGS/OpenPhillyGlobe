@@ -24,7 +24,16 @@ function createPedestrianCount(viewer) {
 		thursday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 1.0, 0.5)),
 		friday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
 		saturday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
-		sunday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5))
+		sunday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
+		
+		'Early Morning' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
+		'Morning RH ' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
+		'Late Morning' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
+		'Lunch' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 1.0, 0.5)),
+		'Late Afternoon' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
+		'Evening RH' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
+		'Evening' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
+		'Late Night' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.5, 0.0, 0.5))		
 	}
 	
 	return function(cameras) {
@@ -65,10 +74,10 @@ function createPedestrianCount(viewer) {
 		    var top = 0.0;
 		    
 		    var properties = [
-///*
+/*
 			   'averageWeekdayPedestrianActivity',
   			   'averageWeekendPedestrianActivity',
-//*/
+*/
 /*  			   
 	           'week1',
 	           'week2',
@@ -84,6 +93,16 @@ function createPedestrianCount(viewer) {
 			   'saturday',
 			   'sunday'
 */
+///*  			   
+  				'Early Morning',
+  				'Morning RH ',
+  				'Late Morning',
+  				'Lunch',
+  				'Late Afternoon',
+  				'Evening RH',
+  				'Evening',
+  				'Late Night'
+//*/			   
 		    ];
 		    
 		    for (var n = 0; n < properties.length; ++n) {
