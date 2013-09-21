@@ -95,15 +95,14 @@ balloonContainer.className = 'pedestrian-balloonContainer';
 viewer.container.appendChild(balloonContainer);
 var balloon = new Cesium.Balloon(balloonContainer, scene);
 
+var pick;
+
 var handler = new Cesium.ScreenSpaceEventHandler(scene.getCanvas());
 handler.setInputAction(
     function (movement) {
-        var pick = scene.pick(movement.endPosition);
+        pick = scene.pick(movement.endPosition);
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && pick.id.showBalloon) {
         	console.log(pick.id.html);
-        	
-        	pick.id.animateExtentSlice(pick.id);
-        	
 // TODO: show balloons
 /*
 			var balloonViewModel = balloon.viewModel;
@@ -116,6 +115,16 @@ handler.setInputAction(
     },
     Cesium.ScreenSpaceEventType.MOUSE_MOVE
 );
+handler.setInputAction(
+    function () {
+        if (Cesium.defined(pick) && Cesium.defined(pick.id) && Cesium.defined(pick.id.animateExtentSlice)) {
+        	pick.id.animateExtentSlice(pick.id);
+        }
+    },
+    Cesium.ScreenSpaceEventType.LEFT_UP
+);
+
+
 
 var debugButtonA = document.getElementById('debugButtonA');
 debugButtonA.onclick = function() {
