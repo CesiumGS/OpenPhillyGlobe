@@ -33,6 +33,10 @@ function createPedestrianCount(viewer) {
 		        }),
 		        attributes : {
 		            color : colors.averageWeekdayPedestrianActivity
+		        },
+		        id : {
+		        	showBalloon : true,
+		        	html : camera.name + '<br />Average Weekday Pedestrian Activity ' + camera.averageWeekdayPedestrianActivity
 		        }
 		    }));
 		    
@@ -49,6 +53,10 @@ function createPedestrianCount(viewer) {
 		        }),
 		        attributes : {
 		            color : colors.averageWeekendPedestrianActivity
+		        },
+		        id : {
+		        	showBalloon : true,
+		        	html : camera.name + '<br />Average Weekend Pedestrian Activity ' + camera.averageWeekendPedestrianActivity
 		        }
 		    }));		    
 		}

@@ -50,41 +50,51 @@ of the world.\nhttp://www.openstreetmap.org',
 	//Add it to viewer.
 	viewer.dataSources.add(geoJsonDataSource);
 
-	var lastFrame = new Date().getTime();
-	var accumulatedMs = 0;
-    function animate(elapsedMs) {
-        accumulatedMs += elapsedMs;
-        if (accumulatedMs > 1000) {
-            accumulatedMs -= 1000;
-            loadSeptaRoutes(viewer, busCollection);
-        }
-    }
-    
-    function tick() {
-        var now = new Date().getTime();
-        var elapsedMs = now - lastFrame;
-        viewer.scene.initializeFrame();
-        animate(elapsedMs);
-        busVisualizers.update(viewer.clock.currentTime);
-        viewer.scene.render();
-        Cesium.requestAnimationFrame(tick);
-        lastFrame = now;
-    }
-    tick();
-
-
 	//If using the data source layer, you can programmatically bring up the balloon browser by assigning a dynamic object to
 	//viewer.balloonedObject = dynamicObject
 
 //////////// End example code from Matt
 ///////////////////////////////////////////////////////////////////////////////
 
+var scene = viewer.scene;
+
+var lastFrame = new Date().getTime();
+var accumulatedMs = 0;
+function animate(elapsedMs) {
+    accumulatedMs += elapsedMs;
+    if (accumulatedMs > 1000) {
+        accumulatedMs -= 1000;
+        loadSeptaRoutes(viewer, busCollection);
+    }
+}
+
+(function tick() {
+    var now = new Date().getTime();
+    var elapsedMs = now - lastFrame;
+    scene.initializeFrame();
+    animate(elapsedMs);
+    busVisualizers.update(viewer.clock.currentTime);
+    scene.render();
+    Cesium.requestAnimationFrame(tick);
+    lastFrame = now;
+})();
+
+var handler = new Cesium.ScreenSpaceEventHandler(scene.getCanvas());
+handler.setInputAction(
+    function (movement) {
+        var pick = scene.pick(movement.endPosition);
+        if (Cesium.defined(pick) && Cesium.defined(pick.id) && pick.id.showBalloon) {
+        	console.log(pick.id.html);
+        }
+    },
+    Cesium.ScreenSpaceEventType.MOUSE_MOVE
+);
+
 Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedestrianCount(viewer), 
     function() {
         // TODO: an error occurred
 });
 
-var scene = viewer.scene;
 scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
     destination : Cesium.Cartographic.fromDegrees(-75.163616, 39.952382, 1500.0),
     duration : 2000
