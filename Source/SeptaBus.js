@@ -15,10 +15,11 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
                 busObj.billboard.image = new Cesium.ConstantProperty('../Assets/images/septa_raised.png');
                 busObj.billboard.verticalOrigin = new Cesium.ConstantProperty(Cesium.VerticalOrigin.BOTTOM);
             }
-            if (!Cesium.defined(busObj.position)) {
-                busObj.position = new Cesium.SampledPositionProperty();
-            }
-            busObj.position.addSample(viewer.clock.currentTime, ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+            //if (!Cesium.defined(busObj.position)) {
+            //    busObj.position = new Cesium.SampledPositionProperty();
+            //}
+            //busObj.position.addSample(viewer.clock.currentTime, ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+            busObj.position = new Cesium.ConstantPositionProperty(ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
         }
     });
 }
