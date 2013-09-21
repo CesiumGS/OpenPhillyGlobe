@@ -79,12 +79,25 @@ function animate(elapsedMs) {
     lastFrame = now;
 })();
 
+var balloonContainer = document.createElement('div');
+balloonContainer.className = 'pedestrian-balloonContainer';
+viewer.container.appendChild(balloonContainer);
+var balloon = new Cesium.Balloon(balloonContainer, scene);
+
 var handler = new Cesium.ScreenSpaceEventHandler(scene.getCanvas());
 handler.setInputAction(
     function (movement) {
         var pick = scene.pick(movement.endPosition);
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && pick.id.showBalloon) {
         	console.log(pick.id.html);
+// TODO: show balloons
+/*
+			var balloonViewModel = balloon.viewModel;
+			balloonViewModel.position = movement.endPosition;
+			balloonViewModel.content = pick.id.html;
+			balloonViewModel.showBalloon = true;
+			balloonViewModel.update();
+ */
         }
     },
     Cesium.ScreenSpaceEventType.MOUSE_MOVE
@@ -99,3 +112,5 @@ scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(sc
     destination : Cesium.Cartographic.fromDegrees(-75.163616, 39.952382, 1500.0),
     duration : 2000
 }));
+
+// TODO: destroy balloon and primitives
