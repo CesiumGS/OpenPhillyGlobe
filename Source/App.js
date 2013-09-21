@@ -117,7 +117,6 @@ handler.setInputAction(
 );
 handler.setInputAction(
     function () {
-// TODO: in general, we need a cleaner way to dispatch from a pick, e.g., primitive vs. id
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && Cesium.defined(pick.id.animateExtentSlice)) {
         	pick.id.animateExtentSlice(pick.id);
         } else if (Cesium.defined(pick) && Cesium.defined(pick.primitive) && pick.primitive.__hideOnPick) {

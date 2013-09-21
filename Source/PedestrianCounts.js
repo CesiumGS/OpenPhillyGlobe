@@ -64,59 +64,18 @@ function createPedestrianCount(viewer) {
 		    var bottom = 0.0;
 		    var top = 0.0;
 		    
-/*
-		    bottom = top;
-		    top += camera[year].averageWeekdayPedestrianActivity * scale;
-
-		    extrusionInstances.push(new Cesium.GeometryInstance({
-		        geometry : new Cesium.CircleGeometry({
-		            center : center,
-		            radius : radius,
-		            height: bottom,
-		            extrudedHeight: top,
-		            vertexFormat : Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
-		        }),
-		        attributes : {
-		            color : colors.averageWeekdayPedestrianActivity
-		        },
-		        id : {
-		        	showBalloon : true,
-		        	html : camera.name + '<br />Average Weekday Pedestrian Activity ' + camera[year].averageWeekdayPedestrianActivity,
-		        	top : top,
-		        	animateExtentSlice : animateExtentSlice
-		        }
-		    }));
-		    
-		    bottom = top;
-		    top += camera[year].averageWeekendPedestrianActivity * scale;
-		    
-		    extrusionInstances.push(new Cesium.GeometryInstance({
-		        geometry : new Cesium.CircleGeometry({
-		            center : center,
-		            radius : radius,
-		            height: bottom,
-		            extrudedHeight: top,
-		            vertexFormat : Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
-		        }),
-		        attributes : {
-		            color : colors.averageWeekendPedestrianActivity
-		        },
-		        id : {
-		        	showBalloon : true,
-		        	html : camera.name + '<br />Average Weekend Pedestrian Activity ' + camera[year].averageWeekendPedestrianActivity,
-		        	top : top,
-		        	animateExtentSlice : animateExtentSlice
-		        }
-		    }));
-*/
-		    
 		    var properties = [
-/*		                      
+///*
+			   'averageWeekdayPedestrianActivity',
+  			   'averageWeekendPedestrianActivity',
+//*/
+/*  			   
 	           'week1',
 	           'week2',
 	           'week3',
 	           'week4'
 */
+/*
 			   'monday',
 			   'tuesday',
 			   'wednesday',
@@ -124,10 +83,17 @@ function createPedestrianCount(viewer) {
 			   'friday',
 			   'saturday',
 			   'sunday'
+*/
 		    ];
 		    
 		    for (var n = 0; n < properties.length; ++n) {
 		    	var property = properties[n];
+		    	
+		    	if (!Cesium.defined(property)) {
+		    		// Each year doesn't have all the data
+debugger;		    		
+		    		continue;
+		    	}
 
 			    bottom = top;
 			    top += camera[year][property] * scale;
