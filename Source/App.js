@@ -1,4 +1,6 @@
 var viewer = new Cesium.Viewer('cesiumContainer', {
+	animation : false,
+	timeline : false,
     selectedImageryProviderViewModel : new Cesium.ImageryProviderViewModel(
     {
         name : 'Open\u00adStreet\u00adMap',
