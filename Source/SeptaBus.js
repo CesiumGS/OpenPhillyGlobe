@@ -12,7 +12,7 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
             var busObj = busCollection.getOrCreateObject(bus.label);
             if (!Cesium.defined(busObj.billboard)) {
                 busObj.billboard = new Cesium.DynamicBillboard();
-                busObj.billboard.image = new Cesium.ConstantProperty('../Assets/images/septa_raised.png');
+                busObj.billboard.image = new Cesium.ConstantProperty('Assets/images/septa_raised.png');
                 busObj.billboard.verticalOrigin = new Cesium.ConstantProperty(Cesium.VerticalOrigin.BOTTOM);
             }
             //if (!Cesium.defined(busObj.position)) {
