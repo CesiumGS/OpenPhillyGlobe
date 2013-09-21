@@ -39,23 +39,17 @@ function createPedestrianCount(viewer) {
 		extentSlice.__hideOnPick = true;
 		primitives.add(extentSlice);
 
-		var animatingExtentSlice = false;
-
 		function animateExtentSlice(id) {
-//			if (!animatingExtentSlice) {
-				animatingExtentSlice = true;
-				
-				extentSlice.show = true;
-				extentSlice.material.uniforms.color.alpha = 0.5;
-				
-		        scene.getAnimations().addProperty(extentSlice, 'height', extentSlice.height, id.top, {
-		            duration : 600,
-		            onComplete : function() {
-		            	animatingExtentSlice = false;
-		            },
-		            easingFunction : Cesium.Tween.Easing.Cubic.InOut
-		        });
-//			}
+			extentSlice.show = true;
+			extentSlice.material.uniforms.color.alpha = 0.5;
+			
+	        scene.getAnimations().addProperty(extentSlice, 'height', extentSlice.height, id.top, {
+	            duration : 600,
+	            onComplete : function() {
+	            	animatingExtentSlice = false;
+	            },
+	            easingFunction : Cesium.Tween.Easing.Cubic.InOut
+	        });
 		}
 		
 // TODO: something cool with radius!
