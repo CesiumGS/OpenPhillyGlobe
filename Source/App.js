@@ -1,14 +1,16 @@
 var viewer = new Cesium.Viewer('cesiumContainer', {
-/*
-	selectedImageryProviderViewModel : new Cesium.OpenStreetMapImageryProvider({
-        url : 'http://tile.openstreetmap.org/'
+    selectedImageryProviderViewModel : new Cesium.ImageryProviderViewModel(
+    {
+        name : 'Open\u00adStreet\u00adMap',
+        iconUrl : Cesium.buildModuleUrl('Widgets/Images/ImageryProviders/openStreetMap.png'),
+        tooltip : 'OpenStreetMap (OSM) is a collaborative project to create a free editable map \
+of the world.\nhttp://www.openstreetmap.org',
+        creationFunction : function() {
+            return new Cesium.OpenStreetMapImageryProvider({
+                url : 'http://tile.openstreetmap.org/'
+            });
+        }
     })
-*/
-/*
-	selectedImageryProviderViewModel : new Cesium.ImageryProviderViewModel({
-		name : 'OpenStreetMap'
-	})
-*/
 });
     
 //Adds default balloon and tracking support (left click/right click)
