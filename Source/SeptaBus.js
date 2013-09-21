@@ -23,3 +23,7 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
         }
     });
 }
+
+function loadSeptaRoutes(viewer, busCollection) {
+	loadSeptaBusRoute(viewer, busCollection, 17);
+}

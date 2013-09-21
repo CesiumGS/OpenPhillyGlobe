@@ -56,7 +56,7 @@ of the world.\nhttp://www.openstreetmap.org',
         accumulatedMs += elapsedMs;
         if (accumulatedMs > 1000) {
             accumulatedMs -= 1000;
-            loadSeptaBusRoute(viewer, busCollection, 17);
+            loadSeptaBusRoutes(viewer, busCollection);
         }
     }
     
