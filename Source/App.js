@@ -119,4 +119,15 @@ scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(sc
     duration : 2000
 }));
 
+var debugButtonA = document.getElementById('debugButtonA');
+debugButtonA.onclick = function() {
+    // do something...
+	debugger;
+};
+var debugButtonB = document.getElementById('debugButtonB');
+debugButtonB.onclick = function() {
+    // do something...
+	debugger;
+};
+
 // TODO: destroy balloon and primitives
