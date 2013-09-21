@@ -1,0 +1,36 @@
+[{
+	"name" : "1100 Block of Chestnut",
+	"longitude" : -75.160045,
+	"latitude" : 39.950361,
+	"averageWeekdayPedestrianActivity" : 10729
+}, {
+	"name" : "1700 Block of Walnut",
+	"longitude" : -75.170419,
+	"latitude" : 39.950103,
+	"averageWeekdayPedestrianActivity" : 7106
+}, {
+	"name" : "1200 Block of Walnut",
+	"longitude" : -75.161977,
+	"latitude" : 39.949066,
+	"averageWeekdayPedestrianActivity" : 23642
+}, {
+	"name" : "800 Block of Market",
+	"longitude" : -75.154075,
+	"latitude" : 39.951215,
+	"averageWeekdayPedestrianActivity" : 20963
+}, {
+	"name" : "Intersection of 12th & Market",
+	"longitude" : -75.160150,
+	"latitude" : 39.951965,
+	"averageWeekdayPedestrianActivity" : 22010
+}, {
+	"name" : "1500 Block of Chestnut",
+	"longitude" : -75.167012,
+	"latitude" : 39.951249,
+	"averageWeekdayPedestrianActivity" : 20687
+}, {
+	"name" : "1600 Block of Chestnut",
+	"longitude" : -75.168656,
+	"latitude" : 39.951472,
+	"averageWeekdayPedestrianActivity" : 23109
+}]
