@@ -2,42 +2,84 @@
 	"name" : "1100 Block of Chestnut",
 	"longitude" : -75.160045,
 	"latitude" : 39.950361,
-	"averageWeekdayPedestrianActivity" : 10729,
-	"averageWeekendPedestrianActivity" : 7010
-}, {
-	"name" : "1700 Block of Walnut",
-	"longitude" : -75.170419,
-	"latitude" : 39.950103,
-	"averageWeekdayPedestrianActivity" : 7106,
-	"averageWeekendPedestrianActivity" : 6937
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 10729,
+		"averageWeekendPedestrianActivity" : 7010
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 11599,
+		"averageWeekendPedestrianActivity" : 7387
+	}
 }, {
 	"name" : "1200 Block of Walnut",
 	"longitude" : -75.161977,
 	"latitude" : 39.949066,
-	"averageWeekdayPedestrianActivity" : 23642,
-	"averageWeekendPedestrianActivity" : 24698
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 7106,
+		"averageWeekendPedestrianActivity" : 6937
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 6434,
+		"averageWeekendPedestrianActivity" : 5687
+	}
+}, {
+	"name" : "1700 Block of Walnut",
+	"longitude" : -75.170419,
+	"latitude" : 39.950103,
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 23642,
+		"averageWeekendPedestrianActivity" : 24698
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 23917,
+		"averageWeekendPedestrianActivity" : 23326
+	}
 }, {
 	"name" : "800 Block of Market",
 	"longitude" : -75.154075,
 	"latitude" : 39.951215,
-	"averageWeekdayPedestrianActivity" : 20963,
-	"averageWeekendPedestrianActivity" : 15630
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 20963,
+		"averageWeekendPedestrianActivity" : 15630
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 20206,
+		"averageWeekendPedestrianActivity" : 13827
+	}
 }, {
 	"name" : "Intersection of 12th & Market",
 	"longitude" : -75.160150,
 	"latitude" : 39.951965,
-	"averageWeekdayPedestrianActivity" : 22010,
-	"averageWeekendPedestrianActivity" : 13959
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 22010,
+		"averageWeekendPedestrianActivity" : 13959
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 20843,
+		"averageWeekendPedestrianActivity" : 13215
+	}
 }, {
 	"name" : "1500 Block of Chestnut",
 	"longitude" : -75.167012,
 	"latitude" : 39.951249,
-	"averageWeekdayPedestrianActivity" : 20687,
-	"averageWeekendPedestrianActivity" : 15383
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 20687,
+		"averageWeekendPedestrianActivity" : 15383
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 20863,
+		"averageWeekendPedestrianActivity" : 14690
+	}
 }, {
 	"name" : "1600 Block of Chestnut",
 	"longitude" : -75.168656,
 	"latitude" : 39.951472,
-	"averageWeekdayPedestrianActivity" : 23109,
-	"averageWeekendPedestrianActivity" : 16073
+	"year2013" : {
+		"averageWeekdayPedestrianActivity" : 23109,
+		"averageWeekendPedestrianActivity" : 16073
+	},
+	"year2012" : {
+		"averageWeekdayPedestrianActivity" : 22156,
+		"averageWeekendPedestrianActivity" : 17109
+	}
 }]

@@ -3,6 +3,10 @@ function createPedestrianCount(viewer) {
 	var primitives = scene.getPrimitives();
 	var ellipsoid = viewer.centralBody.getEllipsoid();
 
+// TODO: UI for these
+	var year = 'year2013';
+//	var year = 'year2012';
+	
 // TODO: Potential UI for these.  Low priority.
 	var scale = 1.0 / 100.0;
 	var colors = {
@@ -21,7 +25,7 @@ function createPedestrianCount(viewer) {
 		    var center = ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(camera.longitude, camera.latitude));
 
 		    var bottom = 0.0;
-		    var top = camera.averageWeekdayPedestrianActivity * scale;
+		    var top = camera[year].averageWeekdayPedestrianActivity * scale;
 
 		    extrusionInstances.push(new Cesium.GeometryInstance({
 		        geometry : new Cesium.CircleGeometry({
@@ -36,12 +40,12 @@ function createPedestrianCount(viewer) {
 		        },
 		        id : {
 		        	showBalloon : true,
-		        	html : camera.name + '<br />Average Weekday Pedestrian Activity ' + camera.averageWeekdayPedestrianActivity
+		        	html : camera.name + '<br />Average Weekday Pedestrian Activity ' + camera[year].averageWeekdayPedestrianActivity
 		        }
 		    }));
 		    
 		    bottom = top;
-		    top += camera.averageWeekendPedestrianActivity * scale;
+		    top += camera[year].averageWeekendPedestrianActivity * scale;
 		    
 		    extrusionInstances.push(new Cesium.GeometryInstance({
 		        geometry : new Cesium.CircleGeometry({
@@ -56,7 +60,7 @@ function createPedestrianCount(viewer) {
 		        },
 		        id : {
 		        	showBalloon : true,
-		        	html : camera.name + '<br />Average Weekend Pedestrian Activity ' + camera.averageWeekendPedestrianActivity
+		        	html : camera.name + '<br />Average Weekend Pedestrian Activity ' + camera[year].averageWeekendPedestrianActivity
 		        }
 		    }));		    
 		}
