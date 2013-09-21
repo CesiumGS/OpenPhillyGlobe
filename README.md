@@ -10,10 +10,10 @@ In the short-term, we are visualizing [SEPTA routes](http://www3.septa.org/hacka
 ![](https://raw.github.com/AnalyticalGraphicsInc/OpenPhillyGlobe/master/Documentation/Ped.png)
 _Real-Time SEPTA locations and average weekday pedestrian activity at Philadelphia street corners in August 2013._
 
-Our vision is there is a great open-data movement in Philadelphia, but there is not a one-stop viewer for the heterogeneous datasets.  OpenPhillyGlobe is an open-source web-based 3D globe for visualizing Philly's open data with an initial focus on viewing multiple transit layers at the same time.
+There is a great open-data movement in Philadelphia, but there is not a one-stop viewer for the heterogeneous datasets.  OpenPhillyGlobe is an open-source web-based 3D globe for visualizing Philly's open data with an initial focus on simultaneously visualizing multiple transit layers.
 
-OpenPhillyGlobe is built on [Cesium](https://github.com/AnalyticalGraphicsInc/cesium), and open-source virtual globe engine, and developed in JavaScript.  It runs in a browser and on mobile without a plugin.
+OpenPhillyGlobe is built on [Cesium](https://github.com/AnalyticalGraphicsInc/cesium), an open-source virtual globe engine, and developed in JavaScript.  It runs in a browser and on mobile without a plugin.
 
 OpenPhillyGlobe is developed for the [Apps for Philly Transit 2013](http://appsforphilly.org/?tag=transit) by [@abwood](https://twitter.com/abwood) and [@pjcozzi](https://twitter.com/pjcozzi) with special thanks to [@matt_amato](https://twitter.com/matt_amato).
 
-Apache 2.0 license - free for commercial and non-commercial use.
+OpenPhillyGlobe uses the Apache 2.0 license.  It is free for commercial and non-commercial use.
