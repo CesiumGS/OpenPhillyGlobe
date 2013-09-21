@@ -23,6 +23,12 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
             //}
             //busObj.position.addSample(viewer.clock.currentTime, ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             busObj.position = new Cesium.ConstantPositionProperty(ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+            var balloonContent = "<table>" +
+                    "<tr><td>Label: </td><td>"+bus.label+"</td></tr>" +
+                    "<tr><td>Direction: </td><td>"+bus.Direction+"</td></tr>" +
+                    "<tr><td>Destination: </td><td>"+bus.destination+"</td></tr>" +
+                    "</table>";
+            busObj.balloon = new Cesium.ConstantProperty(balloonContent);
         }
     },
     function() {
