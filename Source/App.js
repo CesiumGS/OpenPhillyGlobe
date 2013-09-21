@@ -117,8 +117,19 @@ handler.setInputAction(
 );
 handler.setInputAction(
     function () {
+// TODO: in general, we need a cleaner way to dispatch from a pick, e.g., primitive vs. id
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && Cesium.defined(pick.id.animateExtentSlice)) {
         	pick.id.animateExtentSlice(pick.id);
+        } else if (Cesium.defined(pick) && Cesium.defined(pick.primitive) && pick.primitive.__hideOnPick) {
+// TODO: Better UI to hide plane
+        	var primitive = pick.primitive;
+            scene.getAnimations().addAlpha(pick.primitive.material, pick.primitive.material.uniforms.color.alpha, 0.0, {
+            	onComplete : function() {
+            		primitive.show = false;
+            	},
+	            duration : 600,
+	            easingFunction : Cesium.Tween.Easing.Cubic.In
+            });
         }
     },
     Cesium.ScreenSpaceEventType.LEFT_UP

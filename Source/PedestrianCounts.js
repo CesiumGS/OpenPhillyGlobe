@@ -32,16 +32,22 @@ function createPedestrianCount(viewer) {
 		// Duck typed; cameras is not an array of Cartographic.
 		var e = Cesium.Extent.fromCartographicArray(cameras);
 		var extentSlice = new Cesium.ExtentPrimitive({
-			extent : Cesium.Extent.fromDegrees(e.west - delta, e.south - delta, e.east + delta, e.north + delta)
+			extent : Cesium.Extent.fromDegrees(e.west - delta, e.south - delta, e.east + delta, e.north + delta),
+			show : false,
+			asynchronous : false
 		});
-		extentSlice.asynchronous = false;
+		extentSlice.__hideOnPick = true;
 		primitives.add(extentSlice);
 
 		var animatingExtentSlice = false;
 
 		function animateExtentSlice(id) {
-			if (!animatingExtentSlice) {
+//			if (!animatingExtentSlice) {
 				animatingExtentSlice = true;
+				
+				extentSlice.show = true;
+				extentSlice.material.uniforms.color.alpha = 0.5;
+				
 		        scene.getAnimations().addProperty(extentSlice, 'height', extentSlice.height, id.top, {
 		            duration : 600,
 		            onComplete : function() {
@@ -49,7 +55,7 @@ function createPedestrianCount(viewer) {
 		            },
 		            easingFunction : Cesium.Tween.Easing.Cubic.InOut
 		        });
-			}
+//			}
 		}
 		
 // TODO: something cool with radius!
