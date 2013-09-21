@@ -1,0 +1,386 @@
+{
+	"type" : "FeatureCollection",
+	"features" : [
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -8.6028160000000007, 41.165055900000006 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/8th-international-conference-of-ewra-water-resources-management-in-an-interdisciplinary-and-changing-context",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "In Europe, the last decade has been of great change and adaptation in water policy and management. Following the work and progress achieved in the 7th International Conference of EWRA, held in Limassol (2009), on \"Water Resources Conservancy and Risk Reduction Under Climatic Instability\" and the VI International Symposium of EWRA, held in Catania (2011), on \u201cWater Engineering and Management in a Changing Environment\u201d, it is a good opportunity to evaluate the current status of the work achieved by the EU Member States related to the Water Framework Directive (WFD) implementation, having in mind the 2015 deadline. On the other hand, the Floods Directive, published in 2007, is also a current concern of the Member States that are required to draw up flood risk maps by 2013 and establish flood risk management plans by 2015. In parallel, it is also important to highlight and acknowledge the process on water infrastructures and technologies, facing the changing context and the increasing challenges created by climate change and other new paradigms taking place in water resources management. More specifically, according to WFD requirements, the second cycle of River Basin Management Plans cycle will have to include climate change effects.",
+			"title" : "8th INTERNATIONAL CONFERENCE OF EWRA \"Water Resources Management in an Interdisciplinary and Changing Context"
+		},
+		"id" : "8th-international-conference-of-ewra-water-resources-management-in-an-interdisciplinary-and-changing-context"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 35.628662102992244, 0.13183582114299577 ],
+					[ 35.628662102992244, -0.3295880259945505 ],
+					[ 36.573486321573334, -0.3295880259945505 ],
+					[ 36.551513665327164, 0.10986321390773289 ],
+					[ 35.628662102992244, 0.13183582114299577 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/36th-wedc-international-conference-delivering-water-sanitation-and-hygiene-services-in-an-uncertain-environment",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The 36th WEDC conference will incorporate innovations designed to optimize the learning experience of the event both sharing knowledge and development of sector capacity. The conference sessions will run over the first three days, followed by optional sessions which include a careers compass event, for early career WASH professionals, and capacity development workshops on a range of hot topics, including field-based learning opportunities in and around Nakuru.",
+			"title" : "36th WEDC International Conference: Delivering Water, Sanitation and Hygiene Services in an Uncertain Environment"
+		},
+		"id" : "36th-wedc-international-conference-delivering-water-sanitation-and-hygiene-services-in-an-uncertain-environment"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -105.0313721, 39.667209599999985 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/xxiii-annual-colorado-state-university-protected-area-management-short-course",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "This one-month course, taught in Spanish, has been organized annually for over 22 years by the Center for Protected Area Management and Training at Colorado State University (CSU). The course is coordinated by CSU in collaboration with the Office of International Programs of the United States Forest Service.",
+			"title" : "XXIII Annual Colorado State University Protected Area Management Short Course"
+		},
+		"id" : "xxiii-annual-colorado-state-university-protected-area-management-short-course"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 11.97456, 57.708869999999983 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/knowledge-for-the-future",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "The IAHS - IAPSO - IASPEI Joint Assembly will be a forum where scientists within the geophysical disci-\r\nplines hydrology, oceanography, seismology and physics of the Earth\u2019s interior can meet and exchange knowledge and ideas with colleagues from all over the world. The assembly also gives the scientists the opportunity to inform the general public and policy makers. ",
+			"title" : "Knowledge for the future"
+		},
+		"id" : "knowledge-for-the-future"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ -107.70996091821418, 37.926867595682296 ],
+					[ -103.22753904401935, 37.926867595682296 ],
+					[ -103.22753904401935, 39.504040699631936 ],
+					[ -107.79785154320069, 39.504040699631936 ],
+					[ -107.70996091821418, 37.926867595682296 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/imwa2013-reliable-mine-water-technology",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The International Mine Water Association in association with the Colorado School of Mines will host IMWA2013 at the Green Center on the campus of Colorado School of Mines. The Conference will present developments in mine water technology worldwide, including research, implementation, development, impact analysis, regulatory framework, and project applications.",
+			"title" : "IMWA2013 - Reliable Mine Water Technology "
+		},
+		"id" : "imwa2013-reliable-mine-water-technology"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 67.335205066076583, 38.255436370547265 ],
+					[ 67.335205066076583, 38.272688530147136 ],
+					[ 68.939208972039381, 38.272688530147136 ],
+					[ 68.939208972039381, 38.89103282059402 ],
+					[ 67.313232409830405, 38.856820128852291 ],
+					[ 67.335205066076583, 38.255436370547265 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/high-level-international-conference-on-water-cooperation",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The High-Level International Conference on Water Cooperation convened by the Republic of Tajikistan was envisaged in the UNGA resolution 65/154 on the \"Implementation of the International Year of Water Cooperation, 2013\" and constitutes one of the milestones during the year. ",
+			"title" : "High-level International Conference on Water Cooperation"
+		},
+		"id" : "high-level-international-conference-on-water-cooperation"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 12.568337099999999, 55.67609680000001 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/ices-training-course-ecosystem-modelling-for-fishery-management",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "The course is organized by the ICES Secretariat as part of the ICES Training programme and includes applied examples, case studies, and hand-on exercises on the computer. The five-day course is arranged with a series of lectures introducing concepts and implementation, followed by hands-on sessions in which the participants explore the various modules and approaches in EwE, based on simple ecosystem models constructed during the course. ",
+			"title" : "ICES training course: Ecosystem Modelling for Fishery Management"
+		},
+		"id" : "ices-training-course-ecosystem-modelling-for-fishery-management"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 18.048648830981744, 59.330737791805433 ],
+					[ 18.081264492597036, 59.330387544792558 ],
+					[ 18.080234524335566, 59.325834005071549 ],
+					[ 18.048648830981744, 59.325658856743004 ],
+					[ 18.048648830981744, 59.330737791805433 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/world-water-week-2013",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "World Water Week is hosted and organised by the Stockholm International Water Institute (SIWI) and takes place each year in Stockholm. The World Water Week has been the annual focal point for the globe's water issues since 1991. ",
+			"title" : "World Water Week 2013 "
+		},
+		"id" : "world-water-week-2013"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 14.144897458406669, 67.384262255923176 ],
+					[ 14.683227536435748, 67.39271032106754 ],
+					[ 14.67224120831221, 67.231684740411012 ],
+					[ 14.155883786530207, 67.227432592544062 ],
+					[ 14.144897458406669, 67.384262255923176 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/3rd-international-symposium-gia-2013-genomics-in-aquaculture",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The GIA2013 will take place at the University of Nordland and it will cover cutting edge topics related to aquaculture biotechnology, including genomics, epigenomics and other omics applications in aquaculture (nutrition, stress, health and reproduction). \r\n",
+			"title" : "3rd Genomics in Aquaculture symposium (GIA 2013) "
+		},
+		"id" : "3rd-international-symposium-gia-2013-genomics-in-aquaculture"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 16.871871500000001, 41.117143200000001 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/1st-cigr-inter-regional-conference-on-land-and-water-challenges",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "1st CIGR Inter-Regional Conference on Land and Water Challenges organized by CIGR (International Commission of Agricultural and Biosystems Engineering) and CIHEAM \u00e2\u20ac\u201c Mediterranean Agronomic Institute of Bari. ",
+			"title" : "1st CIGR Inter-Regional Conference on Land and Water Challenges"
+		},
+		"id" : "1st-cigr-inter-regional-conference-on-land-and-water-challenges"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 29.359349000000002, -3.3762169999999965 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/fifth-international-conference-of-the-panafrican-fish-and-fisheries-association-1",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "The Fifth International Conference of the PanAfrican Fish and Fisheries Association is organized by the Department of Biology, Faculty of Sciences, University of Burundi. This meeting will provide an opportunity for scientists from throughout  Africa and around the world to come together, to get to know one another, exchange information and ideas, and to initiate collaborative studies. Several renowned scientists, young researchers and other stakeholders are expected to attend this important meeting. ",
+			"title" : "Fifth International Conference of the PanAfrican Fish and Fisheries Association"
+		},
+		"id" : "fifth-international-conference-of-the-panafrican-fish-and-fisheries-association-1"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 152.88574216012751, -27.42053814675058 ],
+					[ 153.07250973821002, -27.625140330528566 ],
+					[ 153.36914059753224, -27.693256338517486 ],
+					[ 153.87451169119169, -27.410785698041831 ],
+					[ 152.88574216012751, -27.42053814675058 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/16th-international-riversymposium",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The 16th International Riversymposium \"Rivers: Linking Water - Energy - Food\" provides an opportunity to look at the linkages that rivers provide to water-energy-food. It will also allow dialogue to continue and build the knowledge base and capacity to inform policy decisions that must include trade-offs between river basin protection and sustainable water, energy and food security.",
+			"title" : "16th International Riversymposium"
+		},
+		"id" : "16th-international-riversymposium"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 16.204833981400142, -22.370396340493858 ],
+					[ 17.764892574870583, -22.370396340493858 ],
+					[ 17.830810543608216, -23.140359983943679 ],
+					[ 16.226806637645424, -23.12015361775693 ],
+					[ 16.204833981400142, -22.370396340493858 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/fifth-bcc-annual-science-forum",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The Benguela Current Commission(BCC) will arrange the Fifth BCC Annual Science Forum at Safari Hotel and Conference Centre in Windhoek, Namibia",
+			"title" : "Fifth BCC Annual Science Forum"
+		},
+		"id" : "fifth-bcc-annual-science-forum"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -105.7820674, 39.550050700000007 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/disccrs-viii-interdisciplinary-climate-change-research-symposium",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "The DISsertations initiative for the advancement of Climate Change ReSearch (DISCCRS, pronounced discourse) hosts symposia for early-career climate change researchers. The goal is to catalyze international, interdisciplinary collegial networks and foster collaborative interdisciplinary research and dynamic interactions between science and society to enable us to better understand and respond to the myriad challenges posed by climate change.",
+			"title" : "DISCCRS VIII Interdisciplinary Climate Change Research Symposium"
+		},
+		"id" : "disccrs-viii-interdisciplinary-climate-change-research-symposium"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 36.821946199999999, -1.2920659000000123 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/iwa-project-innovation-awards-development",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "Project Innovations Awards \u2014 Development (PIA-D) aims to celebrate excellence and innovation in water and sanitation projects in low and middle income countries. Entries for PIA-Development has been extended to 31 May 2013.",
+			"title" : "IWA Project Innovation Awards - Development "
+		},
+		"id" : "iwa-project-innovation-awards-development"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 28.255586000000005, 36.850565899999978 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/global-congress-on-icm-lessons-learned-to-address-new-challenges-emecs-10-medcoast-2013-joint-conference",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "This global ICM event is the joint organization of the Tenth International Conference on Environmental Management of Enclosed Coastal Seas (EMECS 10) and the Eleventh International Conference on the Mediterranean Coastal Environment (MEDCOAST 2013).",
+			"title" : "Global Congress on ICM: Lessons Learned to Address New Challenges (EMECS 10 - MEDCOAST 2013 JOINT Conference)"
+		},
+		"id" : "global-congress-on-icm-lessons-learned-to-address-new-challenges-emecs-10-medcoast-2013-joint-conference"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ -1.0766601560571645, 51.454006903339376 ],
+					[ 0.85693359359646026, 51.454006903339376 ],
+					[ 0.81298828110433208, 52.187404738857317 ],
+					[ -1.0327148435650813, 52.160454551005273 ],
+					[ -1.0766601560571645, 51.454006903339376 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/uea-water-security-the-irrigation-water-forum",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The Irrigation and Water Forum (the new name for ICID.UK) and UEA Water Security are hosting a one day conference on Water and the Green Economy at Instituition of Civil Engineers in London. The term 'green economy' implies economic growth alongside a decreasing consumption of natural capital. ",
+			"title" : "UEA Water Security/The Irrigation & Water Forum"
+		},
+		"id" : "uea-water-security-the-irrigation-water-forum"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -70.639858233175232, -33.462523020559239 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/i-latinoamerican-congress-on-ecohydrology",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "La Universidad de Santiago de Chile y la Direcci\u00f3n General de Aguas tienen el agrado de invitarlo a participar en el I Congreso en EcoHidrolog\u00eda para Am\u00e9rica Latina y El Caribe (CELAC-PHI 2013) el cual se llevar\u00e1 a cabo del 11 al 13 de noviembre de 2013 en el Centro de Eventos Nacionales e Internacionales de la Universidad de Santiago de Chile.",
+			"title" : "I Latinoamerican Congress on Ecohydrology"
+		},
+		"id" : "i-latinoamerican-congress-on-ecohydrology"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 12.568337099999999, 55.67609680000001 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/the-ices-training-course-stock-assessment-advanced-1",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "This is an advanced course in fisheries stock assessment modelling where we explore generic properties of stock assessment methods. The course includes uncertainty estimation of the relevant parameters estimated in stock assessments. It is aimed at scientists who have some foundation in the fundamentals of stock assessments.",
+			"title" : "The ICES training course: \"Stock Assessment (advanced)"
+		},
+		"id" : "the-ices-training-course-stock-assessment-advanced-1"
+	},
+	{
+		"geometry" : {
+			"type" : "Point",
+			"coordinates" : [ 10.614570000000001, 36.401080999999991 ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/4th-maghreb-conference-on-desalination-and-water-treatment-cmtde-2013",
+			"style" : {},
+			"classes" : "point events",
+			"description" : "The Tunisian Association of Desalination (TDA) will organize the 4th Maghreb Conference on Desalination and Water Treatment CMTDE 2013.",
+			"title" : "g4th Maghreb Conference on Desalination and Water Treatment CMTDE 2013"
+		},
+		"id" : "4th-maghreb-conference-on-desalination-and-water-treatment-cmtde-2013"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 152.60009762891812, -27.254629573285865 ],
+					[ 153.6547851287292, -27.29368922033299 ],
+					[ 153.5668945037427, -27.83907609018377 ],
+					[ 152.55615231642042, -27.800209932829322 ],
+					[ 152.60009762891812, -27.254629573285865 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/wash-2014-for-everyone-everywhere-conference",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The WASH 2014 conference will build on the dialogue created by The Joint Monitoring Programme and explore how practitioners might work differently in the post 2015 world if a vision of universal access to WASH is to\r\nbecome a reality in our time. In March 2014, the participants will come together to contribute to the broader international WASH dialogue and share knowledge with the Australian WASH community and partners.",
+			"title" : "WASH 2014 for everyone, everywhere Conference"
+		},
+		"id" : "wash-2014-for-everyone-everywhere-conference"
+	},
+	{
+		"geometry" : {
+			"type" : "Polygon",
+			"coordinates" : [ [
+					[ 4.4439697257664967, 51.869707946956495 ],
+					[ 4.5648193351198376, 51.883272957704115 ],
+					[ 4.5208740226276651, 51.951036638360371 ],
+					[ 4.4000244132743234, 51.944264872293672 ],
+					[ 4.411010741397412, 51.944264872293672 ],
+					[ 4.4439697257664967, 51.869707946956495 ] ] ]
+		},
+		"type" : "Feature",
+		"properties" : {
+			"url" : "http://iwlearn.net/events/deltas-in-times-of-climate-change-ii-international-conference",
+			"style" : {},
+			"classes" : "polygon events",
+			"description" : "The Steering Committee and Organising Committee are pleased to arrange the International conference Deltas in Times of Climate Change II: Opportunities for people, science, cities and business.\r\nDELTAS IN TIMES OF CLIMATE CHANGE II\r\nINTERNATIONAL CONFERENCE\r\nOPPORTUNITIES FOR PEOPLE, SCIENCE, CITIES AND BUSINESS\r\n",
+			"title" : "Deltas in Times of Climate Change II International Conference"
+		},
+		"id" : "deltas-in-times-of-climate-change-ii-international-conference"
+	} ]
+}
