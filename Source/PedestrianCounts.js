@@ -10,21 +10,21 @@ function createPedestrianCount(viewer) {
 // TODO: Potential UI for these.  Low priority.
 	var scale = 1.0 / 100.0;
 	var colors = {
-		averageWeekdayPedestrianActivity : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
-		averageWeekendPedestrianActivity : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
+		'Average Weekday Pedestrian Activity' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
+		'Average Weekend Pedestrian Activity' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
 		
-		week1 : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
-		week2 : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
-		week3 : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
-		week4 : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
+		'Week 1' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
+		'Week 2' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
+		'Week 3' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
+		'Week 4' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
 		
-		monday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
-		tuesday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
-		wednesday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
-		thursday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 1.0, 0.5)),
-		friday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
-		saturday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
-		sunday : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
+		'Monday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
+		'Tuesday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
+		'Wednesday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
+		'Thursday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 1.0, 0.5)),
+		'Friday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
+		'Saturday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
+		'Sunday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
 		
 		'Early Morning' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
 		'Morning RH ' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
@@ -74,26 +74,26 @@ function createPedestrianCount(viewer) {
 		    var top = 0.0;
 		    
 		    var properties = [
+///*
+			   'Average Weekday Pedestrian Activity',
+  			   'Average Weekend Pedestrian Activity',
+//*/
+/*  			   
+	           'Week 1',
+	           'Week 2',
+	           'Week 3',
+	           'Week 4'
+*/
 /*
-			   'averageWeekdayPedestrianActivity',
-  			   'averageWeekendPedestrianActivity',
+			   'Monday',
+			   'Tuesday',
+			   'Wednesday',
+			   'Thursday',
+			   'Friday',
+			   'Saturday',
+			   'Sunday'
 */
 /*  			   
-	           'week1',
-	           'week2',
-	           'week3',
-	           'week4'
-*/
-/*
-			   'monday',
-			   'tuesday',
-			   'wednesday',
-			   'thursday',
-			   'friday',
-			   'saturday',
-			   'sunday'
-*/
-///*  			   
   				'Early Morning',
   				'Morning RH ',
   				'Late Morning',
@@ -102,7 +102,7 @@ function createPedestrianCount(viewer) {
   				'Evening RH',
   				'Evening',
   				'Late Night'
-//*/			   
+*/			   
 		    ];
 		    
 		    for (var n = 0; n < properties.length; ++n) {
