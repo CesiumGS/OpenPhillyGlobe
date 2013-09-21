@@ -58,6 +58,9 @@ of the world.\nhttp://www.openstreetmap.org',
 
 var scene = viewer.scene;
 
+///////////////////////////////////////////////////////////////////////////////
+// Render loop
+
 var lastFrame = new Date().getTime();
 var accumulatedMs = 0;
 var tickRate = 30000;
@@ -80,6 +83,9 @@ function animate(elapsedMs) {
     lastFrame = now;
 })();
 
+///////////////////////////////////////////////////////////////////////////////
+// User interaction
+
 var balloonContainer = document.createElement('div');
 balloonContainer.className = 'pedestrian-balloonContainer';
 viewer.container.appendChild(balloonContainer);
@@ -91,6 +97,9 @@ handler.setInputAction(
         var pick = scene.pick(movement.endPosition);
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && pick.id.showBalloon) {
         	console.log(pick.id.html);
+        	
+        	pick.id.animateExtentSlice(pick.id);
+        	
 // TODO: show balloons
 /*
 			var balloonViewModel = balloon.viewModel;
@@ -104,21 +113,6 @@ handler.setInputAction(
     Cesium.ScreenSpaceEventType.MOUSE_MOVE
 );
 
-Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedestrianCount(viewer), 
-    function() {
-        // TODO: an error occurred
-});
-
-Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
-	    function() {
-	        // TODO: an error occurred
-	});
-
-scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
-    destination : Cesium.Cartographic.fromDegrees(-75.163616, 39.952382, 1500.0),
-    duration : 2000
-}));
-
 var debugButtonA = document.getElementById('debugButtonA');
 debugButtonA.onclick = function() {
     // do something...
@@ -129,5 +123,25 @@ debugButtonB.onclick = function() {
     // do something...
 	debugger;
 };
+
+///////////////////////////////////////////////////////////////////////////////
+// Initialize
+
+Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedestrianCount(viewer), 
+    function() {
+        // TODO: an error occurred
+});
+
+Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
+    function() {
+        // TODO: an error occurred
+});
+
+scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
+    destination : Cesium.Cartographic.fromDegrees(-75.163616, 39.952382, 1500.0),
+    duration : 2000
+}));
+
+
 
 // TODO: destroy balloon and primitives

@@ -28,6 +28,30 @@ function createPedestrianCount(viewer) {
 	}
 	
 	return function(cameras) {
+		var delta = 0.0001;
+		// Duck typed; cameras is not an array of Cartographic.
+		var e = Cesium.Extent.fromCartographicArray(cameras);
+		var extentSlice = new Cesium.ExtentPrimitive({
+			extent : Cesium.Extent.fromDegrees(e.west - delta, e.south - delta, e.east + delta, e.north + delta)
+		});
+		extentSlice.asynchronous = false;
+		primitives.add(extentSlice);
+
+		var animatingExtentSlice = false;
+
+		function animateExtentSlice(id) {
+			if (!animatingExtentSlice) {
+				animatingExtentSlice = true;
+		        scene.getAnimations().addProperty(extentSlice, 'height', extentSlice.height, id.top, {
+		            duration : 600,
+		            onComplete : function() {
+		            	animatingExtentSlice = false;
+		            },
+		            easingFunction : Cesium.Tween.Easing.Cubic.InOut
+		        });
+			}
+		}
+		
 // TODO: something cool with radius!
 		var radius = 20.0;
 
@@ -57,7 +81,9 @@ function createPedestrianCount(viewer) {
 		        },
 		        id : {
 		        	showBalloon : true,
-		        	html : camera.name + '<br />Average Weekday Pedestrian Activity ' + camera[year].averageWeekdayPedestrianActivity
+		        	html : camera.name + '<br />Average Weekday Pedestrian Activity ' + camera[year].averageWeekdayPedestrianActivity,
+		        	top : top,
+		        	animateExtentSlice : animateExtentSlice
 		        }
 		    }));
 		    
@@ -77,7 +103,9 @@ function createPedestrianCount(viewer) {
 		        },
 		        id : {
 		        	showBalloon : true,
-		        	html : camera.name + '<br />Average Weekend Pedestrian Activity ' + camera[year].averageWeekendPedestrianActivity
+		        	html : camera.name + '<br />Average Weekend Pedestrian Activity ' + camera[year].averageWeekendPedestrianActivity,
+		        	top : top,
+		        	animateExtentSlice : animateExtentSlice
 		        }
 		    }));
 */
@@ -89,7 +117,6 @@ function createPedestrianCount(viewer) {
 	           'week3',
 	           'week4'
 */
-
 			   'monday',
 			   'tuesday',
 			   'wednesday',
@@ -119,7 +146,9 @@ function createPedestrianCount(viewer) {
 			        },
 			        id : {
 			        	showBalloon : true,
-			        	html : camera.name + '<br />Week 1 ' + camera[year][property]
+			        	html : camera.name + '<br />' + property + ' ' + camera[year][property],
+			        	top : top,
+			        	animateExtentSlice : animateExtentSlice
 			        }
 			    }));
 		    }
