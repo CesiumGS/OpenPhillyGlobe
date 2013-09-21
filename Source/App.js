@@ -60,10 +60,11 @@ var scene = viewer.scene;
 
 var lastFrame = new Date().getTime();
 var accumulatedMs = 0;
+var tickRate = 30000;
 function animate(elapsedMs) {
     accumulatedMs += elapsedMs;
-    if (accumulatedMs > 1000) {
-        accumulatedMs -= 1000;
+    if (accumulatedMs > tickRate) {
+        accumulatedMs -= tickRate;
         loadSeptaRoutes(viewer, busCollection);
     }
 }
@@ -107,6 +108,11 @@ Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedest
     function() {
         // TODO: an error occurred
 });
+
+Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
+	    function() {
+	        // TODO: an error occurred
+	});
 
 scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
     destination : Cesium.Cartographic.fromDegrees(-75.163616, 39.952382, 1500.0),

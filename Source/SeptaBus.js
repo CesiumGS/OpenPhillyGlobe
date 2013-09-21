@@ -1,3 +1,5 @@
+var busRoutes;
+
 function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
 	Cesium.jsonp("http://www3.septa.org/hackathon/TransitView/trips.php", 
             {parameters:
@@ -21,9 +23,32 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
             //busObj.position.addSample(viewer.clock.currentTime, ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             busObj.position = new Cesium.ConstantPositionProperty(ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
         }
+    },
+    function() {
+        // TODO: error
     });
 }
 
+function createSeptaBusRoutes(viewer, busCollection) {
+
+	return function loadData(jsonData) {
+		busRoutes = jsonData;
+		loadSeptaRoutes(viewer, busCollection);
+	}
+}
+
 function loadSeptaRoutes(viewer, busCollection) {
-	loadSeptaBusRoute(viewer, busCollection, 17);
+	for (var i=0; i<busRoutes.length; i++) {
+		if (busRoutes[i].route_short_name !== "BSS" &&
+				busRoutes[i].route_short_name !== "MFL" &&
+				busRoutes[i].route_short_name !== "LUCYGO" &&
+				busRoutes[i].route_short_name !== "LUCYGR" &&
+				busRoutes[i].route_short_name !== "NHSL" &&
+				busRoutes[i].route_short_name !== "NHSLS" &&
+				busRoutes[i].route_short_name !== "10B" &&
+				busRoutes[i].route_short_name !== "15B") {
+			//console.log(busRoutes[i].route_short_name);
+			loadSeptaBusRoute(viewer, busCollection, busRoutes[i].route_short_name);
+		}
+	}
 }
