@@ -18,11 +18,11 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
                 busObj.billboard.verticalOrigin = new Cesium.ConstantProperty(Cesium.VerticalOrigin.BOTTOM);
                 busObj.billboard.nearFarScalar = new Cesium.ConstantProperty(new Cesium.NearFarScalar(5e2, 1.0, 1.0e4, 0.1));
             }
-            //if (!Cesium.defined(busObj.position)) {
-            //    busObj.position = new Cesium.SampledPositionProperty();
-            //}
-            //busObj.position.addSample(viewer.clock.currentTime, ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
-            busObj.position = new Cesium.ConstantPositionProperty(ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+            if (!Cesium.defined(busObj.position)) {
+                busObj.position = new Cesium.SampledPositionProperty();
+            }
+            busObj.position.addSample(viewer.clock.currentTime.clone().addSeconds(30), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+            //busObj.position = new Cesium.ConstantPositionProperty(ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             var balloonContent = "<table>" +
                     "<tr><td>Label: </td><td>"+bus.label+"</td></tr>" +
                     "<tr><td>Direction: </td><td>"+bus.Direction+"</td></tr>" +
