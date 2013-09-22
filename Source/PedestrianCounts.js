@@ -36,7 +36,9 @@ function createPedestrianCount(viewer) {
 		'Late Night' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.5, 0.0, 0.5))		
 	}
 	
-	return function(cameras) {
+	return function(json) {
+		var cameras = json.cameras;
+		
 		var delta = 0.0001;
 		// Duck typed; cameras is not an array of Cartographic.
 		var e = Cesium.Extent.fromCartographicArray(cameras);
