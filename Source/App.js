@@ -89,7 +89,6 @@ function animate(elapsedMs) {
 ///////////////////////////////////////////////////////////////////////////////
 // User interaction
 
-//var balloon = new Cesium.Balloon(balloonContainer, scene);
 var balloonContainer = document.createElement('div');
 balloonContainer.className = 'cesium-viewer-balloonContainer';
 viewer.container.appendChild(balloonContainer);
@@ -98,10 +97,11 @@ balloon.viewModel.computeScreenSpacePosition = function(value, result) {
 	result.x = value.x;
 	result.y = viewer.container.clientHeight - value.y;
 	return result;
-}
+};
 
+var pedestrianJson;
 var pick;
-var fadedInGeometry = undefined;
+var fadedInGeometry;
 
 var handler = new Cesium.ScreenSpaceEventHandler(scene.getCanvas());
 handler.setInputAction(
@@ -156,14 +156,12 @@ handler.setInputAction(
         	}
         	
         	if (pick.id.showBalloon) {
-//	        	console.log(pick.id.html);
-// TODO: show balloons
 				var balloonViewModel = balloon.viewModel;
 				balloonViewModel.position = movement.endPosition;
 				balloonViewModel.content = pick.id.html;
 				balloonViewModel.showBalloon = true;
 				balloonViewModel.update();
-        	}
+            }
         }
     },
     Cesium.ScreenSpaceEventType.MOUSE_MOVE
@@ -171,10 +169,10 @@ handler.setInputAction(
 handler.setInputAction(
     function () {
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && Cesium.defined(pick.id.animateExtentSlice)) {
-        	pick.id.animateExtentSlice(pick.id);
+            pick.id.animateExtentSlice(pick.id);
         } else if (Cesium.defined(pick) && Cesium.defined(pick.primitive) && pick.primitive.__hideOnPick) {
 // TODO: Better UI to hide plane
-        	var primitive = pick.primitive;
+            var primitive = pick.primitive;
             scene.getAnimations().addAlpha(pick.primitive.material, pick.primitive.material.uniforms.color.alpha, 0.0, {
             	onComplete : function() {
             		primitive.show = false;
@@ -203,21 +201,36 @@ debugButtonB.onclick = function() {
 ///////////////////////////////////////////////////////////////////////////////
 // Initialize
 
+var year = 'August 2013';
+//var year = 'August 2012';
+
+var category = 'Daily Average';
+//var category = 'By Time of Day';
+//var category = 'By Day of Week';
+//var category = 'Weekly Average';
+
+function recreatePedestrianCount() {
+	pick = undefined;
+	fadedInGeometry = undefined;
+	createPedestrianCount(viewer, pedestrianJson, year, category);
+}
 
 var pedestrianButton = document.getElementById('pedestrian-button');
 pedestrianButton.onclick = function() {
-	Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedestrianCount(viewer),
-		    function() {
-		        // TODO: an error occurred
-		});
+	Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(
+		function(json) {
+			pedestrianJson = json;
+			recreatePedestrianCount();
+		},
+	    function() {});
 };
 
 var busButton = document.getElementById('bus-button');
 busButton.onclick = function() {
 	Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
-		    function() {
-		        // TODO: an error occurred
-		});
+	    function() {
+	        // TODO: an error occurred
+	});
 };
 
 scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {

@@ -30,7 +30,7 @@
 		"name" : "1100 Block of Chestnut",
 		"longitude" : -75.160045,
 		"latitude" : 39.950361,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 10729,
 			"Average Weekend Pedestrian Activity" : 7010,
 			"Week 1" : 9759,
@@ -53,7 +53,7 @@
 			"Evening" : 1233,
 			"Late Night" : 368
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 11599,
 			"Average Weekend Pedestrian Activity" : 7387,
 			"Week 1" : 10477,
@@ -73,7 +73,7 @@
 		"name" : "1200 Block of Walnut",
 		"longitude" : -75.161977,
 		"latitude" : 39.949066,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 7106,
 			"Average Weekend Pedestrian Activity" : 6937,
 			"Week 1" : 7084,
@@ -96,7 +96,7 @@
 			"Evening" : 1561,
 			"Late Night" : 738
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 6434,
 			"Average Weekend Pedestrian Activity" : 5687,
 			"Week 1" : 6570,
@@ -116,7 +116,7 @@
 		"name" : "1700 Block of Walnut",
 		"longitude" : -75.170419,
 		"latitude" : 39.950103,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 23642,
 			"Average Weekend Pedestrian Activity" : 24698,
 			"Week 1" : 23812,
@@ -139,7 +139,7 @@
 			"Evening" : 4278,
 			"Late Night" : 1353
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 23917,
 			"Average Weekend Pedestrian Activity" : 23326,
 			"Week 1" : 22629,
@@ -159,7 +159,7 @@
 		"name" : "800 Block of Market",
 		"longitude" : -75.154075,
 		"latitude" : 39.951215,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 20963,
 			"Average Weekend Pedestrian Activity" : 15630,
 			"Week 1" : 19981,
@@ -182,7 +182,7 @@
 			"Evening" : 1782,
 			"Late Night" : 402
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 20206,
 			"Average Weekend Pedestrian Activity" : 13827,
 			"Week 1" : 18335,
@@ -202,7 +202,7 @@
 		"name" : "Intersection of 12th & Market",
 		"longitude" : -75.160150,
 		"latitude" : 39.951965,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 22010,
 			"Average Weekend Pedestrian Activity" : 13959,
 			"Week 1" : 19836,
@@ -225,7 +225,7 @@
 			"Evening" : 1255,
 			"Late Night" : 99
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 20843,
 			"Average Weekend Pedestrian Activity" : 13215,
 			"Week 1" : 18619,
@@ -245,7 +245,7 @@
 		"name" : "1500 Block of Chestnut",
 		"longitude" : -75.167012,
 		"latitude" : 39.951249,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 20687,
 			"Average Weekend Pedestrian Activity" : 15383,
 			"Week 1" : 18774,
@@ -268,7 +268,7 @@
 			"Evening" : 2622,
 			"Late Night" : 585
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 20863,
 			"Average Weekend Pedestrian Activity" : 14690,
 			"Week 1" : 18094,
@@ -288,7 +288,7 @@
 		"name" : "1600 Block of Chestnut",
 		"longitude" : -75.168656,
 		"latitude" : 39.951472,
-		"year2013" : {
+		"August 2013" : {
 			"Average Weekday Pedestrian Activity" : 23109,
 			"Average Weekend Pedestrian Activity" : 16073,
 			"Week 1" : 25255,
@@ -311,7 +311,7 @@
 			"Evening" : 3044,
 			"Late Night" : 733		
 		},
-		"year2012" : {
+		"August 2012" : {
 			"Average Weekday Pedestrian Activity" : 22156,
 			"Average Weekend Pedestrian Activity" : 17109,
 			"Week 1" : 19310,
