@@ -20,10 +20,6 @@ OpenPhillyGlobe uses the Apache 2.0 license.  It is free for commercial and non-
 
 <img src="https://raw.github.com/AnalyticalGraphicsInc/OpenPhillyGlobe/master/Documentation/alexSmall.jpg" width="480" />
 
-**Roadmap**
-
-* There are lots of ideas on the [roadmap](https://github.com/AnalyticalGraphicsInc/OpenPhillyGlobe/wiki/Roadmap).  Send us a pull request.
-
 **Data Sources Credits**
 * [Philadelphia Pedestrian Counts](http://philadelphiaretail.com/demographics-ped-count.aspx)
 * [SEPTA API](http://www3.septa.org/hackathon/)
