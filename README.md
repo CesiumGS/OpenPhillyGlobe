@@ -5,7 +5,7 @@ Open Philly Globe
 
 **Live demo:** http://www.openphillyglobe.org/
 
-Visualize [SEPTA routes](http://www3.septa.org/hackathon/) and [pedestrian counts](http://philadelphiaretail.com/demographics-ped-count.aspx).  We plan to include other transit layers such as [red light cameras](https://github.com/CityOfPhiladelphia/ppa-data) and [bike theft](https://github.com/CityOfPhiladelphia/phl-open-geodata).
+Interactively visualize [SEPTA routes](http://www3.septa.org/hackathon/) and [pedestrian counts](http://philadelphiaretail.com/demographics-ped-count.aspx).  Middle-mouse button drag to tilt the view.  More transit layers to come in the future.
 
 ![](https://raw.github.com/AnalyticalGraphicsInc/OpenPhillyGlobe/master/Documentation/Ped.png)
 _Real-Time SEPTA locations and average weekday pedestrian activity at Philadelphia street corners in August 2013._
