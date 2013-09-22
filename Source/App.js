@@ -200,8 +200,8 @@ handler.setInputAction(
 ///////////////////////////////////////////////////////////////////////////////
 // Initialize
 
-//var year = 'August 2012';
-var year = 'August 2013';
+//var month = 'August 2012';
+var month = 'August 2013';
 
 //var category = 'Daily Average';
 //var category = 'By Time of Day';
@@ -228,7 +228,7 @@ function recreatePedestrianCount() {
 		viewer.scene.getPrimitives().remove(pedestrianPrimitives);
 		pedestrianPrimitives = undefined;
 	}
-	pedestrianPrimitives = createPedestrianCount(viewer, pedestrianJson, year, properties);
+	pedestrianPrimitives = createPedestrianCount(viewer, pedestrianJson, month, properties);
 }
 
 var pedestrianButton = document.getElementById('pedestrian-button');
@@ -241,39 +241,39 @@ pedestrianButton.onclick = function() {
         function() {});
 };
 // Setup the Pedestrian Counts dialog
-$("#pedCount").dialog({
+$("#pedMonth").dialog({
 	title : "Pedestrian Counts",
 	width: 300,
 	height: 100,
 	modal: false,
 	position: {my: "left center", at: "left center", of: "canvas"}
 }).dialog("close");
-$("#pedCount-radio").css("margin-left", "auto");
-$("#pedCount-radio").css("margin-rigt", "auto");
-$("#pedCount-radio").buttonset();
-$("#pedCount-radio label").css("font-size", "12px");
-$("#ui-dialog-title-pedCount").css("font-size", "16px");
+$("#pedMonth-radio").css("margin-left", "auto");
+$("#pedMonth-radio").css("margin-rigt", "auto");
+$("#pedMonth-radio").buttonset();
+$("#pedMonth-radio label").css("font-size", "10px");
+$("#ui-dialog-title-pedMonth").css("font-size", "14px");
 // Setup the Daily Average dialog
-$("#pedAverage").dialog({
+$("#pedCategory").dialog({
 	title : "Pedestrian Average",
 	width: 550,
 	height: 100,
 	modal: false,
 	position: {my: "top center", at: "top center", of: "canvas"}
 }).dialog("close");
-$("#pedAverage-radio").css("margin-left", "auto");
-$("#pedAverage-radio").css("margin-rigt", "auto");
-$("#pedAverage-radio").buttonset();
-$("#pedAverage-radio label").css("font-size", "12px");
-$("#ui-dialog-title-pedAverage").css("font-size", "16px");
+$("#pedCategory-radio").css("margin-left", "auto");
+$("#pedCategory-radio").css("margin-rigt", "auto");
+$("#pedCategory-radio").buttonset();
+$("#pedCategory-radio label").css("font-size", "10px");
+$("#ui-dialog-title-pedCategory").css("font-size", "14px");
 
-$("#pedAverage-radio").change(function() {
-	category = $("#pedAverage-radio input[type='radio']:checked").attr('id');
+$("#pedCategory-radio").change(function() {
+	category = $("#pedCategory-radio input[type='radio']:checked").attr('id');
 	recreatePedestrianCount();	
 });
 
-$("#pedCount-radio").change(function() {
-	year = $("#pedCount-radio input[type='radio']:checked").attr('id');
+$("#pedMonth-radio").change(function() {
+	month = $("#pedMonth-radio input[type='radio']:checked").attr('id');
 	recreatePedestrianCount();	
 });
 

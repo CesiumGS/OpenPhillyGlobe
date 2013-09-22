@@ -1,10 +1,7 @@
-function createPedestrianCount(viewer, json, year, properties) {
-
-	$("#pedCount").dialog("open");
-	$("#pedAverage").dialog("open");
-
-	$( "#pedAverage" ).dialog( "option", "position", { my: "center top", at: "center bottom", of: $("#pedCount") } );
-
+function createPedestrianCount(viewer, json, month, properties) {
+	$("#pedMonth").dialog("open");
+	$("#pedCategory").dialog("open");
+	$( "#pedCategory" ).dialog( "option", "position", { my: "center top", at: "center bottom", of: $("#pedMonth") } );
 
 	var scene = viewer.scene;
 	var primitives = scene.getPrimitives();
@@ -59,16 +56,16 @@ function createPedestrianCount(viewer, json, year, properties) {
 		for ( var n = 0; n < properties.length; ++n) {
 			var property = properties[n];
 
-			if (!Cesium.defined(camera[year][property])) {
-				// Each year doesn't have all the data
+			if (!Cesium.defined(camera[month][property])) {
+				// Each month doesn't have all the data
 				continue;
 			}
 
 			bottom = top;
-			top += camera[year][property] * scale;
+			top += camera[month][property] * scale;
 
 			var html = '<div style="font-weight: bold">' + camera.name + '</div><br />' +
-                property + ' ' + numberWithCommas(camera[year][property]) + '<br /><br />' +
+                property + ' ' + numberWithCommas(camera[month][property]) + '<br /><br />' +
                 '<a href="' + pdf + '" target="_blank">PDF Report</a>';
 
 			extrusionInstances.push(new Cesium.GeometryInstance({
