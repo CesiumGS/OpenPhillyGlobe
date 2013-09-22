@@ -23,6 +23,7 @@ OpenPhillyGlobe uses the Apache 2.0 license.  It is free for commercial and non-
 **Data Sources Credits**
 * [Philadelphia Pedestrian Counts](http://philadelphiaretail.com/demographics-ped-count.aspx)
 * [SEPTA API](http://www3.septa.org/hackathon/)
+* [Philadelphia Bicycle Thefts](https://github.com/CityOfPhiladelphia/phl-open-geodata/tree/master/bicycle_thefts)
 * [OpenStreetMap](http://www.openstreetmap.org/)
 
 **Artwork Credits**
