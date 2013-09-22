@@ -243,8 +243,8 @@ pedestrianButton.onclick = function() {
 // Setup the Pedestrian Counts dialog
 $("#pedMonth").dialog({
 	title : "Pedestrian Counts",
-	width: 300,
-	height: 100,
+	width: 220,
+	height: 80,
 	modal: false,
 	position: {my: "left center", at: "left center", of: "canvas"}
 }).dialog("close");
@@ -256,8 +256,8 @@ $("#ui-dialog-title-pedMonth").css("font-size", "14px");
 // Setup the Daily Average dialog
 $("#pedCategory").dialog({
 	title : "Pedestrian Average",
-	width: 550,
-	height: 100,
+	width: 460,
+	height: 80,
 	modal: false,
 	position: {my: "top center", at: "top center", of: "canvas"}
 }).dialog("close");
