@@ -91,9 +91,14 @@ function animate(elapsedMs) {
 
 //var balloon = new Cesium.Balloon(balloonContainer, scene);
 var balloonContainer = document.createElement('div');
-balloonContainer.className = 'pedestrian-balloonContainer';
+balloonContainer.className = 'cesium-viewer-balloonContainer';
 viewer.container.appendChild(balloonContainer);
 var balloon = new Cesium.Balloon(balloonContainer, scene);
+balloon.viewModel.computeScreenSpacePosition = function(value, result) {
+	result.x = value.x;
+	result.y = viewer.container.clientHeight - value.y;
+	return result;
+}
 
 var pick;
 var fadedInGeometry = undefined;
@@ -153,13 +158,11 @@ handler.setInputAction(
         	if (pick.id.showBalloon) {
 //	        	console.log(pick.id.html);
 // TODO: show balloons
-/*
 				var balloonViewModel = balloon.viewModel;
 				balloonViewModel.position = movement.endPosition;
 				balloonViewModel.content = pick.id.html;
 				balloonViewModel.showBalloon = true;
 				balloonViewModel.update();
-	 */
         	}
         }
     },
