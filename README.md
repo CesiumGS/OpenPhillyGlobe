@@ -16,18 +16,18 @@ OpenPhillyGlobe is built on [Cesium](https://github.com/AnalyticalGraphicsInc/ce
 
 OpenPhillyGlobe is developed for the [Apps for Philly Transit 2013](http://appsforphilly.org/?tag=transit) by [@abwood](https://twitter.com/abwood) and [@pjcozzi](https://twitter.com/pjcozzi) with special thanks to [@matt_amato](https://twitter.com/matt_amato).
 
-<img src="https://raw.github.com/AnalyticalGraphicsInc/OpenPhillyGlobe/master/Documentation/alexSmall.jpg" width="480" />
-
 OpenPhillyGlobe uses the Apache 2.0 license.  It is free for commercial and non-commercial use.
 
-Data Sources
+<img src="https://raw.github.com/AnalyticalGraphicsInc/OpenPhillyGlobe/master/Documentation/alexSmall.jpg" width="480" />
+
+**Data Sources**
 * [Philadelphia Pedestrian Counts](http://philadelphiaretail.com/demographics-ped-count.aspx)
 * [SEPTA API](http://www3.septa.org/hackathon/)
 * [OpenStreetMap](http://www.openstreetmap.org/)
 
-Artwork
+**Artwork**
 * [SEPTA](https://twitter.com/SEPTA)
 * [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Pictograms-nps-misc-pedestrian_crossing.svg)
 
-Links
+**Links**
 * OpenPhillyGlobe on [codeforphilly.org](http://codeforphilly.org/projects/OpenPhillyGlobe)
