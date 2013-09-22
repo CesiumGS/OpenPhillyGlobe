@@ -131,7 +131,7 @@ debugger;
 			        },
 			        id : {
 			        	showBalloon : true,
-			        	html : camera.name + '<br />' + property + ' ' + camera[year][property],
+			        	html : camera.name + '<br />' + property + ' ' + numberWithCommas(camera[year][property]),
 			        	top : top,
 			        	animateExtentSlice : animateExtentSlice
 			        }
