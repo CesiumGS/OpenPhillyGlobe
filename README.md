@@ -3,7 +3,7 @@ OpenPhillyGlobe
 
 "Google Earth for Philadelphia" with open source and open transit data.
 
-**Live demo:** http://cesium.agi.com/OpenPhillyGlobe/
+**Live demo:** http://www.openphillyglobe.org/
 
 In the short-term, we are visualizing [SEPTA routes](http://www3.septa.org/hackathon/) and [pedestrian counts](http://philadelphiaretail.com/demographics-ped-count.aspx).  We plan to include other transit layers such as [red light cameras](https://github.com/CityOfPhiladelphia/ppa-data) and [bike theft](https://github.com/CityOfPhiladelphia/phl-open-geodata).
 
