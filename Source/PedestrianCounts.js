@@ -83,10 +83,9 @@ function createPedestrianCount(viewer) {
 				bottom = top;
 				top += camera[year][property] * scale;
 
-				var html = camera.name + '<br />' + property + ' ' +
-                    numberWithCommas(camera[year][property]) +
-                    '<p><a href="' + pdf +
-                    '" target="_blank">PDF Report</a></p>';
+				var html = '<div style="font-weight: bold">' + camera.name + '</div><br />' +
+                    property + ' ' + numberWithCommas(camera[year][property]) + '<br /><br />' +
+                    '<a href="' + pdf + '" target="_blank">PDF Report</a>';
 
 				extrusionInstances
 						.push(new Cesium.GeometryInstance(
