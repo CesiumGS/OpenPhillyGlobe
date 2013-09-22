@@ -59,7 +59,7 @@ function createPedestrianCount(viewer, json, year, properties) {
 		for ( var n = 0; n < properties.length; ++n) {
 			var property = properties[n];
 
-			if (!Cesium.defined(property)) {
+			if (!Cesium.defined(camera[year][property])) {
 				// Each year doesn't have all the data
 				continue;
 			}
@@ -95,13 +95,18 @@ function createPedestrianCount(viewer, json, year, properties) {
 		}
 	}
 
-	var p = new Cesium.Primitive({
-		geometryInstances : extrusionInstances,
-		appearance : new Cesium.PerInstanceColorAppearance({
-			closed : true
-		})
-	});
-	composite.add(p);
+	// Workaround Cesium bug
+	if (extrusionInstances.length > 0) {
+		var p = new Cesium.Primitive({
+			geometryInstances : extrusionInstances,
+			appearance : new Cesium.PerInstanceColorAppearance({
+				closed : true
+			}),
+			// TODO: sync until we have onComplete
+			asynchronous : false
+		});
+		composite.add(p);
+	}
 	
 	return composite;
 }

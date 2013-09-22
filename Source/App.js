@@ -197,28 +197,16 @@ handler.setInputAction(
     Cesium.ScreenSpaceEventType.LEFT_CLICK
 );
 
-
-var debugButtonA = document.getElementById('debugButtonA');
-debugButtonA.onclick = function() {
-    // do something...
-	debugger;
-};
-var debugButtonB = document.getElementById('debugButtonB');
-debugButtonB.onclick = function() {
-    // do something...
-	debugger;
-};
-
 ///////////////////////////////////////////////////////////////////////////////
 // Initialize
 
-var year = 'August 2013';
 //var year = 'August 2012';
+var year = 'August 2013';
 
-var category = 'Daily Average';
+//var category = 'Daily Average';
 //var category = 'By Time of Day';
 //var category = 'By Day of Week';
-//var category = 'Weekly Average';
+var category = 'Weekly Average';
 
 function recreatePedestrianCount() {
 	var properties;
@@ -231,14 +219,13 @@ function recreatePedestrianCount() {
 		properties = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 	} else if (category ==='Weekly Average') {
 		properties = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
-	}	
+	}
 	
 	pick = undefined;
 	fadedInGeometry = undefined;
 	if (Cesium.defined(pedestrianPrimitives)) {
 		// TODO: if current animations are executing referencing these, it won't be good.
 		viewer.scene.getPrimitives().remove(pedestrianPrimitives);
-		pedestrianPrimitives.destroy();
 		pedestrianPrimitives = undefined;
 	}
 	pedestrianPrimitives = createPedestrianCount(viewer, pedestrianJson, year, properties);
@@ -281,13 +268,13 @@ $("#pedAverage-radio label").css("font-size", "12px");
 $("#ui-dialog-title-pedAverage").css("font-size", "16px");
 
 $("#pedAverage-radio").change(function() {
-	var selected = $("#pedAverage-radio input[type='radio']:checked").attr('id');
-	debugger;
+	category = $("#pedAverage-radio input[type='radio']:checked").attr('id');
+	recreatePedestrianCount();	
 });
 
 $("#pedCount-radio").change(function() {
-	var selected = $("#pedCount-radio input[type='radio']:checked").attr('id');
-	debugger;
+	year = $("#pedCount-radio input[type='radio']:checked").attr('id');
+	recreatePedestrianCount();	
 });
 
 var busButton = document.getElementById('bus-button');
