@@ -1,0 +1,25 @@
+ .styled-select select {
+     background: transparent;
+     width: 350px;
+	 padding: 5px;
+	 font-size: 16px;
+	 line-height: 1;
+	 border: 0;
+	 border-radius: 0;
+	 height: 34px;
+	 -webkit-appearance: none;
+	 -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+     -o-transition: opacity 1s ease-in-out;
+     -ms-transition: opacity 1s ease-in-out;
+     transition: opacity 1s ease-in-out;
+}
+
+.styled-select {
+	 width: 350px;
+	 height: 34px;
+	 overflow: hidden;
+	 background: url(Assets/images/septa_small.png) no-repeat right #ddd;
+	 border: 1px solid #ccc;
+	 opacity: 0;
+}

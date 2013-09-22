@@ -3,9 +3,12 @@
 <head>
   <title>Open Philly Globe</title>
   <script src="ThirdParty/Cesium/Cesium.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.23/jquery-ui.min.js"></script>
   <style>
       @import url(ThirdParty/Cesium/Widgets/widgets.css);
       @import url(button.css);
+      @import url(combobox.css);
 
       #cesiumContainer {
           position: absolute;
@@ -25,6 +28,7 @@
           overflow: hidden;
       }
   </style>
+  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.23/themes/ui-darkness/jquery-ui.css" type="text/css">
 </head>
 <body>
   <div id="cesiumContainer"></div>
@@ -42,6 +46,8 @@
       <div class="openphilly-buttontext">
             Pedestrian
       </div>
+  </div>
+  <div id="busComboContainer" class="styled-select" style="position:absolute; top: 0px; left:50%;">
   </div>
   <script src="Source/Core.js"></script>
   <script src="Source/SeptaBus.js"></script>

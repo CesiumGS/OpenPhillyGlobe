@@ -71,7 +71,7 @@ function animate(elapsedMs) {
     accumulatedMs += elapsedMs;
     if (accumulatedMs > tickRate) {
         accumulatedMs -= tickRate;
-        loadSeptaRoutes(viewer, busCollection);
+        refreshRoute(viewer, busCollection);
     }
 }
 
@@ -202,6 +202,7 @@ debugButtonB.onclick = function() {
 
 ///////////////////////////////////////////////////////////////////////////////
 // Initialize
+
 
 var pedestrianButton = document.getElementById('pedestrian-button');
 pedestrianButton.onclick = function() {

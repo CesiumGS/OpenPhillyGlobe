@@ -21,6 +21,7 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
             if (!Cesium.defined(busObj.position)) {
                 busObj.position = new Cesium.SampledPositionProperty();
                 busObj.position.addSample(viewer.clock.currentTime.clone(), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+                busObj.position.addSample(viewer.clock.currentTime.clone().addSeconds(30), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             } else {
                 busObj.position.addSample(viewer.clock.currentTime.clone().addSeconds(30), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             }
@@ -39,11 +40,37 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
 }
 
 function createSeptaBusRoutes(viewer, busCollection) {
+	// Create toolbar template
+
+	$("#busComboContainer").remove("#busCombobox");
+	$("#busComboContainer").css("opacity", 1);
+	$("#busComboContainer").append($("<select></select>")
+			.attr("id", "busCombobox"));
+	$("#busCombobox").change(function(d) {
+		var routeId = $("#busCombobox option").filter(":selected").val();
+		loadSeptaBusRoute(viewer, busCollection, routeId);
+	});
 
 	return function loadData(jsonData) {
 		busRoutes = jsonData;
-		loadSeptaRoutes(viewer, busCollection);
-	};
+		//loadSeptaRoutes(viewer, busCollection);
+		// build combobox
+		for (var i=0; i<busRoutes.length; i++) {
+			if (busRoutes[i].route_short_name !== "BSS" &&
+					busRoutes[i].route_short_name !== "MFL" &&
+					busRoutes[i].route_short_name !== "LUCYGO" &&
+					busRoutes[i].route_short_name !== "LUCYGR" &&
+					busRoutes[i].route_short_name !== "NHSL" &&
+					busRoutes[i].route_short_name !== "NHSLS" &&
+					busRoutes[i].route_short_name !== "10B" &&
+					busRoutes[i].route_short_name !== "15B") {
+
+				$("#busCombobox").append($("<option></option>")
+				         .attr("value", busRoutes[i].route_short_name)
+				         .text(busRoutes[i].route_long_name)); 
+			}
+		}
+	}
 }
 
 function loadSeptaRoutes(viewer, busCollection) {
@@ -60,8 +87,17 @@ function loadSeptaRoutes(viewer, busCollection) {
 				busRoutes[i].route_short_name !== "NHSLS" &&
 				busRoutes[i].route_short_name !== "10B" &&
 				busRoutes[i].route_short_name !== "15B") {
+
+			$("#busCombobox").append($("<option></option>")
+			         .attr("value", busRoutes[i].route_short_name)
+			         .text(busRoutes[i].route_long_name)); 
 			//console.log(busRoutes[i].route_short_name);
 			loadSeptaBusRoute(viewer, busCollection, busRoutes[i].route_short_name);
 		}
 	}
+}
+
+function refreshRoute(viewer, busCollection) {
+	var routeId = $("#busCombobox option").filter(":selected").val();
+	loadSeptaBusRoute(viewer, busCollection, routeId);
 }
