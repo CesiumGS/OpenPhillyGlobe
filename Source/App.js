@@ -280,6 +280,16 @@ $("#pedAverage-radio").buttonset();
 $("#pedAverage-radio label").css("font-size", "12px");
 $("#ui-dialog-title-pedAverage").css("font-size", "16px");
 
+$("#pedAverage-radio").change(function() {
+	var selected = $("#pedAverage-radio input[type='radio']:checked").attr('id');
+	debugger;
+});
+
+$("#pedCount-radio").change(function() {
+	var selected = $("#pedCount-radio input[type='radio']:checked").attr('id');
+	debugger;
+});
+
 var busButton = document.getElementById('bus-button');
 busButton.onclick = function() {
 	Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),

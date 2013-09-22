@@ -16,7 +16,7 @@
           transform: translate(130px,0);
           transform-origin: 100% 0;
           transition-duration: 1s;
-	}
+	};
 
 	@media only screen and (min-width: 1920px) {
 	    .openphilly-button {
