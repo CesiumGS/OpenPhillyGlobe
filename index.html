@@ -5,6 +5,7 @@
   <script src="ThirdParty/Cesium/Cesium.js"></script>
   <style>
       @import url(ThirdParty/Cesium/Widgets/widgets.css);
+      @import url(button.css);
 
       #cesiumContainer {
           position: absolute;
@@ -18,48 +19,6 @@
           font-family: sans-serif;
       }
 
-      .openphilly-button {
-          display:block;
-          position: absolute;
-          top: 150px;
-          right: 5px;
-          width: 200px;
-          height: 64px;
-          background: rgba(42, 42, 42, 0.8);
-          border-radius: 7px;
-          -webkit-transform: translate(130px,0);
-          -webkit-transform-origin: 100% 0;
-          -webkit-transition-duration: 1s;
-          -moz-transform: translate(130px,0);
-          -moz-transform-origin: 100% 0;
-          -moz-transition-duration: 1s;
-          transform: translate(130px,0);
-          transform-origin: 100% 0;
-          transition-duration: 1s;
-	}
-
-	@media only screen and (min-width: 1920px) {
-	    .openphilly-button {
-            -webkit-transform: translate(130px,0);
-            -moz-transform: translate(130px,0);
-            transform: translate(130px,0);
-	    }
-	}
-
-	.openphilly-button:hover {
-          -webkit-transform: translate(10px,0);
-          -moz-transform: translate(10px,0);
-          transform: translate(10px,0);
-	}
-
-	.openphilly-buttontext {
-          color: white;
-          text-align:right;
-          position: absolute;
-          left: 64px;
-          top: 25px;
-          font-family:"Arial";
-	}
 
       body {
           padding: 0;

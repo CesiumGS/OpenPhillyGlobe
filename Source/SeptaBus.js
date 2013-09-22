@@ -47,6 +47,10 @@ function createSeptaBusRoutes(viewer, busCollection) {
 }
 
 function loadSeptaRoutes(viewer, busCollection) {
+	if (!Cesium.defined(busRoutes)) {
+		return;
+	}
+
 	for (var i=0; i<busRoutes.length; i++) {
 		if (busRoutes[i].route_short_name !== "BSS" &&
 				busRoutes[i].route_short_name !== "MFL" &&
