@@ -283,11 +283,10 @@ busButton.onclick = function() {
 };
 
 var railButton = document.getElementById('rail-button');
-busButton.onclick = function() {
-//	Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
-//        function() {
-//            // TODO: an error occurred
-//	});
+railButton.onclick = function() {
+	var railKml = new Cesium.KmlDataSource();
+	railKml.loadUrl('Assets/regionalrail.kml');
+	viewer.dataSources.add(railKml);
 };
 
 scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
