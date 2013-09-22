@@ -1,22 +1,13 @@
-function createPedestrianCount(viewer, json, year, category) {
+function createPedestrianCount(viewer, json, year, properties) {
 	var scene = viewer.scene;
 	var primitives = scene.getPrimitives();
 	var ellipsoid = viewer.centralBody.getEllipsoid();
 
+	var composite = new Cesium.CompositePrimitive();
+	primitives.add(composite);
+
 	// TODO: Potential UI for these.  Low priority.
 	var scale = 1.0 / 100.0;
-
-	var properties;
-	
-	if (category ==='Daily Average') {
-		properties = ['Average Weekday Pedestrian Activity', 'Average Weekend Pedestrian Activity'];
-	} else if (category ==='By Time of Day') {
-		properties = ['Early Morning', 'Morning RH ', 'Late Morning', 'Lunch', 'Late Afternoon', 'Evening RH', 'Evening', 'Late Night'];
-	} else if (category ==='By Day of Week') {
-		properties = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-	} else if (category ==='Weekly Average') {
-		properties = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
-	}	
 
 	var pdf = json.pdf;
 	var styles = json.styles;
@@ -31,7 +22,7 @@ function createPedestrianCount(viewer, json, year, category) {
 		asynchronous : false
 	});
 	extentSlice.__hideOnPick = true;
-	primitives.add(extentSlice);
+	composite.add(extentSlice);
 
 	function animateExtentSlice(id) {
 		extentSlice.show = true;
@@ -97,10 +88,13 @@ function createPedestrianCount(viewer, json, year, category) {
 		}
 	}
 
-	primitives.add(new Cesium.Primitive({
+	var p = new Cesium.Primitive({
 		geometryInstances : extrusionInstances,
 		appearance : new Cesium.PerInstanceColorAppearance({
 			closed : true
 		})
-	}));
+	});
+	composite.add(p);
+	
+	return composite;
 }

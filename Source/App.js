@@ -100,6 +100,7 @@ balloon.viewModel.computeScreenSpacePosition = function(value, result) {
 };
 
 var pedestrianJson;
+var pedestrianPrimitives;
 var pick;
 var endPosition;
 var fadedInGeometry;
@@ -220,9 +221,27 @@ var category = 'Daily Average';
 //var category = 'Weekly Average';
 
 function recreatePedestrianCount() {
+	var properties;
+	
+	if (category ==='Daily Average') {
+		properties = ['Average Weekday Pedestrian Activity', 'Average Weekend Pedestrian Activity'];
+	} else if (category ==='By Time of Day') {
+		properties = ['Early Morning', 'Morning RH ', 'Late Morning', 'Lunch', 'Late Afternoon', 'Evening RH', 'Evening', 'Late Night'];
+	} else if (category ==='By Day of Week') {
+		properties = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+	} else if (category ==='Weekly Average') {
+		properties = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+	}	
+	
 	pick = undefined;
 	fadedInGeometry = undefined;
-	createPedestrianCount(viewer, pedestrianJson, year, category);
+	if (Cesium.defined(pedestrianPrimitives)) {
+		// TODO: if current animations are executing referencing these, it won't be good.
+		viewer.scene.getPrimitives().remove(pedestrianPrimitives);
+		pedestrianPrimitives.destroy();
+		pedestrianPrimitives = undefined;
+	}
+	pedestrianPrimitives = createPedestrianCount(viewer, pedestrianJson, year, properties);
 }
 
 var pedestrianButton = document.getElementById('pedestrian-button');
@@ -232,7 +251,7 @@ pedestrianButton.onclick = function() {
 			pedestrianJson = json;
 			recreatePedestrianCount();
 		},
-	    function() {});
+        function() {});
 };
 
 var busButton = document.getElementById('bus-button');
