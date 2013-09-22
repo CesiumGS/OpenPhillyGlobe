@@ -1,4 +1,5 @@
 {
+    "pdf" : "http://philadelphiaretail.com/pdf/ped_counts/PedCount082013.pdf",
 	"styles" : {
 		"Average Weekday Pedestrian Activity" : [0.0, 1.0, 0.0, 0.5],
 		"Average Weekend Pedestrian Activity" : [1.0, 0.0, 0.0, 0.5],

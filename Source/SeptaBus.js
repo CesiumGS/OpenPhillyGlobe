@@ -43,7 +43,7 @@ function createSeptaBusRoutes(viewer, busCollection) {
 	return function loadData(jsonData) {
 		busRoutes = jsonData;
 		loadSeptaRoutes(viewer, busCollection);
-	}
+	};
 }
 
 function loadSeptaRoutes(viewer, busCollection) {
