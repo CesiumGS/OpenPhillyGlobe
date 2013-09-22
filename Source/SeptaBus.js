@@ -1,6 +1,11 @@
 var busRoutes;
 
 function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
+	if (routeNumber === "all") {
+		// special case, load all routes when "all" routeNumber is set
+		loadSeptaRoutes(viewer, busCollection);
+	}
+
 	Cesium.jsonp("http://www3.septa.org/hackathon/TransitView/trips.php", 
             {parameters:
             {
@@ -48,12 +53,17 @@ function createSeptaBusRoutes(viewer, busCollection) {
 			.attr("id", "busCombobox"));
 	$("#busCombobox").change(function(d) {
 		var routeId = $("#busCombobox option").filter(":selected").val();
+		busCollection.removeAll();
 		loadSeptaBusRoute(viewer, busCollection, routeId);
 	});
 
 	return function loadData(jsonData) {
 		busRoutes = jsonData;
-		//loadSeptaRoutes(viewer, busCollection);
+		// Add all to the beginning of the list
+		busRoutes.unshift({
+			route_short_name : "all",
+			route_long_name: "All"
+		});
 		// build combobox
 		for (var i=0; i<busRoutes.length; i++) {
 			if (busRoutes[i].route_short_name !== "BSS" &&
@@ -66,11 +76,15 @@ function createSeptaBusRoutes(viewer, busCollection) {
 					busRoutes[i].route_short_name !== "15B") {
 
 				$("#busCombobox").append($("<option></option>")
-				         .attr("value", busRoutes[i].route_short_name)
-				         .text(busRoutes[i].route_long_name)); 
+                         .attr("value", busRoutes[i].route_short_name)
+                         .text(busRoutes[i].route_long_name));
 			}
 		}
-	}
+
+		loadSeptaBusRoute(viewer, busCollection, "all");
+		$('#busCombobox option:selected', 'select').removeAttr('selected');
+		$('#busCombobox option[value="all"]').attr('selected', 'selected');
+	};
 }
 
 function loadSeptaRoutes(viewer, busCollection) {
@@ -79,7 +93,9 @@ function loadSeptaRoutes(viewer, busCollection) {
 	}
 
 	for (var i=0; i<busRoutes.length; i++) {
-		if (busRoutes[i].route_short_name !== "BSS" &&
+		if (
+				busRoutes[i].route_short_name !== "all" &&
+				busRoutes[i].route_short_name !== "BSS" &&
 				busRoutes[i].route_short_name !== "MFL" &&
 				busRoutes[i].route_short_name !== "LUCYGO" &&
 				busRoutes[i].route_short_name !== "LUCYGR" &&
@@ -88,16 +104,18 @@ function loadSeptaRoutes(viewer, busCollection) {
 				busRoutes[i].route_short_name !== "10B" &&
 				busRoutes[i].route_short_name !== "15B") {
 
-			$("#busCombobox").append($("<option></option>")
-			         .attr("value", busRoutes[i].route_short_name)
-			         .text(busRoutes[i].route_long_name)); 
-			//console.log(busRoutes[i].route_short_name);
 			loadSeptaBusRoute(viewer, busCollection, busRoutes[i].route_short_name);
 		}
 	}
 }
 
 function refreshRoute(viewer, busCollection) {
+	// cheap check for whether or not bus route has been clicked
+	var showRoutes = $("#busComboContainer").css("opacity");
+	if (showRoutes === "0") {
+		return;
+	}
+
 	var routeId = $("#busCombobox option").filter(":selected").val();
 	loadSeptaBusRoute(viewer, busCollection, routeId);
 }
