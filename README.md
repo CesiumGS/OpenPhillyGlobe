@@ -28,7 +28,7 @@ OpenPhillyGlobe uses the Apache 2.0 license.  It is free for commercial and non-
 
 **Artwork Credits**
 * [SEPTA](https://twitter.com/SEPTA)
-* [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Pictograms-nps-misc-pedestrian_crossing.svg)
+* [Wikimedia Commons](http://commons.wikimedia.org/)
 
 **Links**
 * OpenPhillyGlobe on [codeforphilly.org](http://codeforphilly.org/projects/OpenPhillyGlobe)
