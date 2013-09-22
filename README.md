@@ -18,5 +18,14 @@ OpenPhillyGlobe is developed for the [Apps for Philly Transit 2013](http://appsf
 
 OpenPhillyGlobe uses the Apache 2.0 license.  It is free for commercial and non-commercial use.
 
+Data Sources
+* [Philadelphia Pedestrian Counts](http://philadelphiaretail.com/demographics-ped-count.aspx)
+* [SEPTA API](http://www3.septa.org/hackathon/)
+* [OpenStreetMap](http://www.openstreetmap.org/)
+
+Artwork
+* [SEPTA](https://twitter.com/SEPTA)
+* [Wikimedia Commons](http://commons.wikimedia.org/wiki/File:Pictograms-nps-misc-pedestrian_crossing.svg)
+
 Links
 * OpenPhillyGlobe on [codeforphilly.org](http://codeforphilly.org/projects/OpenPhillyGlobe)
