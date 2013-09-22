@@ -277,9 +277,17 @@ $("#pedMonth-radio").change(function() {
 var busButton = document.getElementById('bus-button');
 busButton.onclick = function() {
 	Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
-	    function() {
-	        // TODO: an error occurred
+        function() {
+            // TODO: an error occurred
 	});
+};
+
+var railButton = document.getElementById('rail-button');
+busButton.onclick = function() {
+//	Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
+//        function() {
+//            // TODO: an error occurred
+//	});
 };
 
 scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
