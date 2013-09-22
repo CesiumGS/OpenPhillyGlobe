@@ -101,11 +101,13 @@ balloon.viewModel.computeScreenSpacePosition = function(value, result) {
 
 var pedestrianJson;
 var pick;
+var endPosition;
 var fadedInGeometry;
 
 var handler = new Cesium.ScreenSpaceEventHandler(scene.getCanvas());
 handler.setInputAction(
     function (movement) {
+    	endPosition = movement.endPosition;
         pick = scene.pick(movement.endPosition);
         if (Cesium.defined(pick) && Cesium.defined(pick.id)) {
         	
@@ -154,37 +156,45 @@ handler.setInputAction(
 		            }
 	            });
         	}
-        	
-        	if (pick.id.showBalloon) {
-				var balloonViewModel = balloon.viewModel;
-				balloonViewModel.position = movement.endPosition;
-				balloonViewModel.content = pick.id.html;
-				balloonViewModel.showBalloon = true;
-				balloonViewModel.update();
-            }
         }
     },
     Cesium.ScreenSpaceEventType.MOUSE_MOVE
 );
+// Double click to show balloon
 handler.setInputAction(
     function () {
+        if (Cesium.defined(pick) && Cesium.defined(pick.id) && pick.id.showBalloon) {
+			var balloonViewModel = balloon.viewModel;
+			balloonViewModel.position = endPosition;
+			balloonViewModel.content = pick.id.html;
+			balloonViewModel.showBalloon = true;
+			balloonViewModel.update();
+        }
+    },
+    Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
+);
+// Single click to show/hide plane
+handler.setInputAction(
+    function () {
+		var balloonViewModel = balloon.viewModel;
+		balloonViewModel.showBalloon = false;
+		balloonViewModel.update();
+
         if (Cesium.defined(pick) && Cesium.defined(pick.id) && Cesium.defined(pick.id.animateExtentSlice)) {
             pick.id.animateExtentSlice(pick.id);
         } else if (Cesium.defined(pick) && Cesium.defined(pick.primitive) && pick.primitive.__hideOnPick) {
-// TODO: Better UI to hide plane
             var primitive = pick.primitive;
             scene.getAnimations().addAlpha(pick.primitive.material, pick.primitive.material.uniforms.color.alpha, 0.0, {
-            	onComplete : function() {
-            		primitive.show = false;
-            	},
-	            duration : 600,
-	            easingFunction : Cesium.Tween.Easing.Cubic.In
+                onComplete : function() {
+                    primitive.show = false;
+                },
+                duration : 600,
+                easingFunction : Cesium.Tween.Easing.Cubic.In
             });
         }
     },
-    Cesium.ScreenSpaceEventType.LEFT_UP
+    Cesium.ScreenSpaceEventType.LEFT_CLICK
 );
-
 
 
 var debugButtonA = document.getElementById('debugButtonA');
