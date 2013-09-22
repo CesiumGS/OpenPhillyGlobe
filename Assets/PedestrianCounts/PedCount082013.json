@@ -1,4 +1,30 @@
 {
+	"styles" : {
+		"Average Weekday Pedestrian Activity" : [0.0, 1.0, 0.0, 0.5],
+		"Average Weekend Pedestrian Activity" : [1.0, 0.0, 0.0, 0.5],
+		
+		"Week 1" : [0.0, 0.0, 1.0, 0.5],
+		"Week 2" : [1.0, 1.0, 0.0, 0.5],
+		"Week 3" : [1.0, 1.0, 1.0, 0.5],
+		"Week 4" : [1.0, 0.0, 1.0, 0.5],
+		
+		"Monday" : [1.0, 0.0, 0.0, 0.5],
+		"Tuesday" : [0.0, 1.0, 0.0, 0.5],
+		"Wednesday" : [0.0, 0.0, 1.0, 0.5],
+		"Thursday" : [0.0, 1.0, 1.0, 0.5],
+		"Friday" : [1.0, 1.0, 0.0, 0.5],
+		"Saturday" : [1.0, 0.0, 1.0, 0.5],
+		"Sunday" : [1.0, 1.0, 1.0, 0.5],
+		
+		"Early Morning" : [1.0, 0.0, 0.0, 0.5],
+		"Morning RH " : [0.0, 1.0, 0.0, 0.5],
+		"Late Morning" : [0.0, 0.0, 1.0, 0.5],
+		"Lunch" : [0.0, 1.0, 1.0, 0.5],
+		"Late Afternoon" : [1.0, 1.0, 0.0, 0.5],
+		"Evening RH" : [1.0, 0.0, 1.0, 0.5],
+		"Evening" : [1.0, 1.0, 1.0, 0.5],
+		"Late Night" : [1.0, 0.5, 0.0, 0.5]
+	},
 	"cameras" : [{
 		"name" : "1100 Block of Chestnut",
 		"longitude" : -75.160045,

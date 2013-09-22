@@ -9,34 +9,9 @@ function createPedestrianCount(viewer) {
 	
 // TODO: Potential UI for these.  Low priority.
 	var scale = 1.0 / 100.0;
-	var colors = {
-		'Average Weekday Pedestrian Activity' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
-		'Average Weekend Pedestrian Activity' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
-		
-		'Week 1' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
-		'Week 2' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
-		'Week 3' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
-		'Week 4' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
-		
-		'Monday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
-		'Tuesday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
-		'Wednesday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
-		'Thursday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 1.0, 0.5)),
-		'Friday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
-		'Saturday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
-		'Sunday' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
-		
-		'Early Morning' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 0.0, 0.5)),
-		'Morning RH ' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 0.0, 0.5)),
-		'Late Morning' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 0.0, 1.0, 0.5)),
-		'Lunch' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(0.0, 1.0, 1.0, 0.5)),
-		'Late Afternoon' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 0.0, 0.5)),
-		'Evening RH' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.0, 1.0, 0.5)),
-		'Evening' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 1.0, 1.0, 0.5)),
-		'Late Night' : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(1.0, 0.5, 0.0, 0.5))		
-	}
 	
 	return function(json) {
+		var styles = json.styles;
 		var cameras = json.cameras;
 		
 		var delta = 0.0001;
@@ -129,7 +104,8 @@ debugger;
 			            vertexFormat : Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
 			        }),
 			        attributes : {
-			            color : colors[property]
+			        	// Not optimized!
+			            color : Cesium.ColorGeometryInstanceAttribute.fromColor(new Cesium.Color(styles[property][0], styles[property][1], styles[property][2], styles[property][3]))
 			        },
 			        id : {
 			        	showBalloon : true,
