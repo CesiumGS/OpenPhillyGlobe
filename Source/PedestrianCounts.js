@@ -1,4 +1,11 @@
 function createPedestrianCount(viewer, json, year, properties) {
+
+	$("#pedCount").dialog("open");
+	$("#pedAverage").dialog("open");
+
+	$( "#pedAverage" ).dialog( "option", "position", { my: "center top", at: "center bottom", of: $("#pedCount") } );
+
+
 	var scene = viewer.scene;
 	var primitives = scene.getPrimitives();
 	var ellipsoid = viewer.centralBody.getEllipsoid();

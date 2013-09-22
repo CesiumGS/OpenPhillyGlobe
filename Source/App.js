@@ -253,6 +253,32 @@ pedestrianButton.onclick = function() {
 		},
         function() {});
 };
+// Setup the Pedestrian Counts dialog
+$("#pedCount").dialog({
+	title : "Pedestrian Counts",
+	width: 300,
+	height: 100,
+	modal: false,
+	position: {my: "left center", at: "left center", of: "canvas"}
+}).dialog("close");
+$("#pedCount-radio").css("margin-left", "auto");
+$("#pedCount-radio").css("margin-rigt", "auto");
+$("#pedCount-radio").buttonset();
+$("#pedCount-radio label").css("font-size", "12px");
+$("#ui-dialog-title-pedCount").css("font-size", "16px");
+// Setup the Daily Average dialog
+$("#pedAverage").dialog({
+	title : "Pedestrian Average",
+	width: 550,
+	height: 100,
+	modal: false,
+	position: {my: "top center", at: "top center", of: "canvas"}
+}).dialog("close");
+$("#pedAverage-radio").css("margin-left", "auto");
+$("#pedAverage-radio").css("margin-rigt", "auto");
+$("#pedAverage-radio").buttonset();
+$("#pedAverage-radio label").css("font-size", "12px");
+$("#ui-dialog-title-pedAverage").css("font-size", "16px");
 
 var busButton = document.getElementById('bus-button');
 busButton.onclick = function() {

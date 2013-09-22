@@ -28,7 +28,7 @@
           overflow: hidden;
       }
   </style>
-  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.23/themes/ui-darkness/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 </head>
 <body>
   <div id="cesiumContainer"></div>
@@ -48,6 +48,23 @@
       </div>
   </div>
   <div id="busComboContainer" class="styled-select" style="position:absolute; top: 0px; left:50%;">
+  </div>
+  <div id="pedCount">
+    <form>
+        <div id="pedCount-radio">
+        <input type="radio" id="aug2012" name="radio" /><label for="aug2012">August 2012</label>
+        <input type="radio" id="aug2013" name="radio" checked="checked" /><label for="aug2013">August 2013</label>
+        </div>
+    </form>
+  </div>
+  <div id="pedAverage">
+    <form>
+        <div id="pedAverage-radio">
+        <input type="radio" id="dailyByTimeOfDay" name="radio" checked="checked"/><label for="dailyByTimeOfDay">Daily By Time Of Day</label>
+        <input type="radio" id="dailyByDayOfWeek" name="radio" /><label for="dailyByDayOfWeek">Daily By Day Of Week</label>
+        <input type="radio" id="weeklyAverage" name="radio" /><label for="weeklyAverage">Weekly Average</label>
+        </div>
+    </form>
   </div>
   <script src="Source/Core.js"></script>
   <script src="Source/SeptaBus.js"></script>
