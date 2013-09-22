@@ -96,21 +96,71 @@ viewer.container.appendChild(balloonContainer);
 var balloon = new Cesium.Balloon(balloonContainer, scene);
 
 var pick;
+var fadedInGeometry = undefined;
 
 var handler = new Cesium.ScreenSpaceEventHandler(scene.getCanvas());
 handler.setInputAction(
     function (movement) {
         pick = scene.pick(movement.endPosition);
-        if (Cesium.defined(pick) && Cesium.defined(pick.id) && pick.id.showBalloon) {
-        	console.log(pick.id.html);
+        if (Cesium.defined(pick) && Cesium.defined(pick.id)) {
+        	
+        	var primitive = pick.primitive;
+        	var id = pick.id;
+        	
+        	if (!id.__fadedIn) {
+	        	id.__fadedIn = true;
+	        	
+	        	if (Cesium.defined(fadedInGeometry)) {
+	        		var outPrimitive = fadedInGeometry.primitive;
+	        		var outId = fadedInGeometry.id;
+	        		
+		            scene.getAnimations().add({
+		            	startValue : { alpha : 1.0 },
+		            	stopValue : { alpha : 0.5 } ,
+			            duration : 200,
+	                    easingFunction : Cesium.Tween.Easing.Cubic.In,
+			            onUpdate : function(value) {
+			            	// Not optimized at all.
+			            	var attributes = outPrimitive.getGeometryInstanceAttributes(outId);
+			            	attributes.color = [attributes.color[0], attributes.color[1], attributes.color[2], value.alpha * 255.0];
+			            },
+			            onComplete : function() {
+			            	outId.__fadedIn = false;
+			            }
+		            });
+	        	}
+	        	
+	        	fadedInGeometry = {
+        			primitive : primitive,
+        			id : id
+	        	};
+	        	
+	            scene.getAnimations().add({
+	            	startValue : { alpha : 0.5 },
+	            	stopValue : { alpha : 1.0 } ,
+		            duration : 200,
+                    easingFunction : Cesium.Tween.Easing.Cubic.In,
+		            onUpdate : function(value) {
+		            	// Not optimized at all.
+		            	var attributes = primitive.getGeometryInstanceAttributes(id);
+		            	attributes.color = [attributes.color[0], attributes.color[1], attributes.color[2], value.alpha * 255.0];
+		            },
+		            onComplete : function() {
+		            }
+	            });
+        	}
+        	
+        	if (pick.id.showBalloon) {
+//	        	console.log(pick.id.html);
 // TODO: show balloons
 /*
-			var balloonViewModel = balloon.viewModel;
-			balloonViewModel.position = movement.endPosition;
-			balloonViewModel.content = pick.id.html;
-			balloonViewModel.showBalloon = true;
-			balloonViewModel.update();
- */
+				var balloonViewModel = balloon.viewModel;
+				balloonViewModel.position = movement.endPosition;
+				balloonViewModel.content = pick.id.html;
+				balloonViewModel.showBalloon = true;
+				balloonViewModel.update();
+	 */
+        	}
         }
     },
     Cesium.ScreenSpaceEventType.MOUSE_MOVE

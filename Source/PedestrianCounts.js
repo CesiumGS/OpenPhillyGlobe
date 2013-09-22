@@ -133,7 +133,8 @@ debugger;
 			        	showBalloon : true,
 			        	html : camera.name + '<br />' + property + ' ' + numberWithCommas(camera[year][property]),
 			        	top : top,
-			        	animateExtentSlice : animateExtentSlice
+			        	animateExtentSlice : animateExtentSlice,
+			        	__fadedIn : false
 			        }
 			    }));
 		    }
