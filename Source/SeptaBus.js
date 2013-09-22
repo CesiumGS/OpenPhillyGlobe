@@ -1,9 +1,16 @@
 var busRoutes;
+var kmlDataSource;
 
-function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
+function loadSeptaBusRoute(viewer, busCollection, routeNumber, showRoutes) {
 	if (routeNumber === "all") {
 		// special case, load all routes when "all" routeNumber is set
 		loadSeptaRoutes(viewer, busCollection);
+	}
+
+	if (showRoutes) {
+		kmlDataSource = new Cesium.KmlDataSource();
+		kmlDataSource.loadUrl('Assets/google_bus/kml/'+routeNumber+'.kml');
+		viewer.dataSources.add(kmlDataSource);
 	}
 
 	Cesium.jsonp("http://www3.septa.org/hackathon/TransitView/trips.php", 
@@ -53,8 +60,10 @@ function createSeptaBusRoutes(viewer, busCollection) {
 			.attr("id", "busCombobox"));
 	$("#busCombobox").change(function(d) {
 		var routeId = $("#busCombobox option").filter(":selected").val();
+		// clear out old route kml
+		viewer.dataSources.remove(kmlDataSource);
 		busCollection.removeAll();
-		loadSeptaBusRoute(viewer, busCollection, routeId);
+		loadSeptaBusRoute(viewer, busCollection, routeId, routeId !== "all");
 	});
 
 	return function loadData(jsonData) {
@@ -81,7 +90,7 @@ function createSeptaBusRoutes(viewer, busCollection) {
 			}
 		}
 
-		loadSeptaBusRoute(viewer, busCollection, "all");
+		loadSeptaBusRoute(viewer, busCollection, "all", false);
 		$('#busCombobox option:selected', 'select').removeAttr('selected');
 		$('#busCombobox option[value="all"]').attr('selected', 'selected');
 	};
@@ -117,5 +126,5 @@ function refreshRoute(viewer, busCollection) {
 	}
 
 	var routeId = $("#busCombobox option").filter(":selected").val();
-	loadSeptaBusRoute(viewer, busCollection, routeId);
+	loadSeptaBusRoute(viewer, busCollection, routeId, routeId !== "all");
 }

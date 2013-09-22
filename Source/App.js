@@ -26,8 +26,6 @@ of the world.\nhttp://www.openstreetmap.org',
 
 	//Load a data source GeoJsonDataSource, KmlDataSource, CzmlDataSource
 	var geoJsonDataSource = new Cesium.GeoJsonDataSource();
-	var kmlDataSource = new Cesium.KmlDataSource();
-	kmlDataSource.loadUrl('Assets/17.kml');
 
 	//If you want to style the GeoJsonDataSource, you can do it before loading a file
 	var billboard = new Cesium.DynamicBillboard();
@@ -51,7 +49,6 @@ of the world.\nhttp://www.openstreetmap.org',
 
 	//Add it to viewer.
 	viewer.dataSources.add(geoJsonDataSource);
-	viewer.dataSources.add(kmlDataSource);
 
 	//If using the data source layer, you can programmatically bring up the balloon browser by assigning a dynamic object to
 	//viewer.balloonedObject = dynamicObject
