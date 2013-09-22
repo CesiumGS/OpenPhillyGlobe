@@ -18,6 +18,49 @@
           font-family: sans-serif;
       }
 
+      .openphilly-button {
+          display:block;
+          position: absolute;
+          top: 150px;
+          right: 5px;
+          width: 200px;
+          height: 64px;
+          background: rgba(42, 42, 42, 0.8);
+          border-radius: 7px;
+          -webkit-transform: translate(130px,0);
+          -webkit-transform-origin: 100% 0;
+          -webkit-transition-duration: 1s;
+          -moz-transform: translate(130px,0);
+          -moz-transform-origin: 100% 0;
+          -moz-transition-duration: 1s;
+          transform: translate(130px,0);
+          transform-origin: 100% 0;
+          transition-duration: 1s;
+	}
+
+	@media only screen and (min-width: 1920px) {
+	    .openphilly-button {
+            -webkit-transform: translate(130px,0);
+            -moz-transform: translate(130px,0);
+            transform: translate(130px,0);
+	    }
+	}
+
+	.openphilly-button:hover {
+          -webkit-transform: translate(10px,0);
+          -moz-transform: translate(10px,0);
+          transform: translate(10px,0);
+	}
+
+	.openphilly-buttontext {
+          color: white;
+          text-align:right;
+          position: absolute;
+          left: 64px;
+          top: 25px;
+          font-family:"Arial";
+	}
+
       body {
           padding: 0;
           margin: 0;
@@ -29,6 +72,18 @@
   <div id="cesiumContainer"></div>
   <div id="debugButtonA" style="position: absolute; top: 0px; left: 0px; height: 32px; width: 32px; background: black;"></div>
   <div id="debugButtonB" style="position: absolute; top: 0px; left: 32px; height: 32px; width: 32px; background: red;"></div>
+  <div id="bus-button" class="openphilly-button" style="top:200px">
+      <img src="Assets/images/septa.png" style="position:absolute; left:0"/>
+      <div class="openphilly-buttontext">
+            Buses
+      </div>
+  </div>
+  <div id="pedestrian-button" class="openphilly-button" style="top:275px">
+      <img src="Assets/images/pedestrian.png" style="position:absolute; left:0"/>
+      <div class="openphilly-buttontext">
+            Pedestrian
+      </div>
+  </div>
   <script src="Source/Core.js"></script>
   <script src="Source/SeptaBus.js"></script>
   <script src="Source/PedestrianCounts.js"></script>

@@ -20,8 +20,10 @@ function loadSeptaBusRoute(viewer, busCollection, routeNumber) {
             }
             if (!Cesium.defined(busObj.position)) {
                 busObj.position = new Cesium.SampledPositionProperty();
+                busObj.position.addSample(viewer.clock.currentTime.clone(), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
+            } else {
+                busObj.position.addSample(viewer.clock.currentTime.clone().addSeconds(30), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             }
-            busObj.position.addSample(viewer.clock.currentTime.clone().addSeconds(30), ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             //busObj.position = new Cesium.ConstantPositionProperty(ellipsoid.cartographicToCartesian(Cesium.Cartographic.fromDegrees(bus.lng, bus.lat)));
             var balloonContent = "<table>" +
                     "<tr><td>Label: </td><td>"+bus.label+"</td></tr>" +

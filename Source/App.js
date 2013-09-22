@@ -200,15 +200,21 @@ debugButtonB.onclick = function() {
 ///////////////////////////////////////////////////////////////////////////////
 // Initialize
 
-Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedestrianCount(viewer), 
-    function() {
-        // TODO: an error occurred
-});
+var pedestrianButton = document.getElementById('pedestrian-button');
+pedestrianButton.onclick = function() {
+	Cesium.loadJson('Assets/PedestrianCounts/PedCount082013.json').then(createPedestrianCount(viewer),
+		    function() {
+		        // TODO: an error occurred
+		});
+};
 
-Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
-    function() {
-        // TODO: an error occurred
-});
+var busButton = document.getElementById('bus-button');
+busButton.onclick = function() {
+	Cesium.loadJson('Assets/google_bus/routes.json').then(createSeptaBusRoutes(viewer, busCollection),
+		    function() {
+		        // TODO: an error occurred
+		});
+};
 
 scene.getAnimations().add(Cesium.CameraFlightPath.createAnimationCartographic(scene, {
     destination : Cesium.Cartographic.fromDegrees(-75.163616, 39.952382, 1500.0),
